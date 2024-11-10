@@ -19,9 +19,30 @@
 }
 .section-wrapper {
   padding: 16px 0;
+  position: relative;
+  overflow: hidden;
+}
+.section-wrapper::after {
+  content: attr(data-bg-text);
+  color: #fff;
+  position: absolute;
+  font-size: 29vw;
+  letter-spacing: 1vw;
+  bottom: -6vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bg-gray-grdient {
+  background: linear-gradient(#eaeaea, #f8f8f8);
+}
+.bg-gray {
+  background: #f2f2f2;
 }
 .flipX {
   transform: rotate(180deg);
+}
+.w-80 {
+  width: 80%
 }
 /* BOOTSTRAP
 ------------------------------------------------------------------------------*/
@@ -119,6 +140,8 @@
   font-weight: lighter;
   letter-spacing: 1px;
   margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 .heading-slabSerif span {
   color: var(--primary-color);
@@ -130,9 +153,11 @@
 }
 .heading-sansSerif {
   font-family: "Arial Rounded MT", sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 0;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+    z-index: 1;
 }
 .heading-sansSerif span {
   color: var(--black-color);
@@ -335,4 +360,70 @@
 }
 .ourProducts-bottombar .pagination .page-item .page-link img {
   width: 42px;
+}
+/* ABOUT GIANT INFLATBLES
+------------------------------------------------------------------------------*/
+.card.card-simple {
+  border-color: #ccc;
+  border-radius: 36px;
+  padding: 28px;
+}
+.card.card-simple p {
+  color: #323232;
+  font-size: 18px;
+  line-height: 28px;
+}
+/* OUR CLIENTS
+------------------------------------------------------------------------------*/
+.ourClients-wrapper {
+  padding: 0 100px;
+}
+.ourClients-wrapper .owl-carousel .ourClient-box {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, .15), 0 1px 3px rgba(0, 0, 0, .3);
+  padding: 50px;
+  margin: 15px 20px;
+}
+.ourClients-wrapper .owl-carousel .owl-nav .owl-next {
+  left: -60px;
+}
+.ourClients-wrapper .owl-carousel .owl-nav .owl-prev {
+  right: -60px;
+}
+/* OUR BLOGS
+------------------------------------------------------------------------------*/
+.ourBlogs-wrapper {
+  padding: 0 50px;
+}
+.ourBlogs-wrapper .owl-carousel .owl-nav .owl-next {
+  left: -50px;
+}
+.ourBlogs-wrapper .owl-carousel .owl-nav .owl-prev {
+  right: -50px;
+}
+/* OUR BLOGS
+------------------------------------------------------------------------------*/
+.ourCategories-wrapper {
+  padding: 0 50px;
+}
+.ourCategories-wrapper .owl-carousel .ourCategories-box {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, .15), 0 1px 3px rgba(0, 0, 0, .3);
+  margin: 15px 20px;
+}
+.ourCategories-wrapper .owl-carousel .owl-nav .owl-next {
+  left: -50px;
+}
+.ourCategories-wrapper .owl-carousel .owl-nav .owl-prev {
+  right: -50px;
+}
+/* OUR VENTURES
+------------------------------------------------------------------------------*/
+.ourVentures-wrapper .owl-carousel .owl-nav .owl-next {
+  left: -50px;
+}
+.ourVentures-wrapper .owl-carousel .owl-nav .owl-prev {
+  right: -50px;
 }
