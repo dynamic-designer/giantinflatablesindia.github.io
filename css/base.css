@@ -88,11 +88,11 @@
 }
 .boxnav__item--prev {
 	position: absolute;
-    left: 20px;
+    left: 1.25rem;
 }
 .boxnav__item--next {
 	position: absolute;
-    right: 20px;
+    right: 1.25rem;
 }
 .boxnav__item--prev:hover,
 .boxnav__item--next:hover {
@@ -102,8 +102,8 @@
 	outline: none;
 }
 .boxnav__item svg {
-	width: 36px;
-	height: 36px;
+	width: 2.25rem;
+	height: 2.25rem;
 	transition: all 0.5s;
 }
 .boxnav__item svg:hover {

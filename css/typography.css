@@ -18,7 +18,7 @@
   ------------------------------------------------------------------------------*/
   body {
     color: #000;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Arial Rounded MT', sans-serif;
     font-weight: 400;
     line-height: 1.2;
@@ -36,28 +36,28 @@
     font-weight: 700;
   }
   .h1, h1 {
-    font-size: 100px;
-    margin-bottom: 20px;
+    font-size: 6.25rem;
+    margin-bottom: 1.25rem;
   }
   .h2, h2 {
-    font-size: 100px;
-    margin-bottom: 20px;
+    font-size: 6.25rem;
+    margin-bottom: 1.25rem;
   }
   .h3, h3 {
-    font-size: 75px;
-    margin-bottom: 17px;
+    font-size: 4.6875rem;
+    margin-bottom: 1.0625rem;
   }
   .h4, h4 {
-    font-size: 42px;
-    margin-bottom: 17px;
+    font-size: 2.625rem;
+    margin-bottom: 1.0625rem;
   }
   .h5, h5 {
-    font-size: 38px;
-    margin-bottom: 15px;
+    font-size: 2.375rem;
+    margin-bottom: .9375rem;
   }
   .h6, h6 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    margin-bottom: .9375rem;
   }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
     color: inherit;
@@ -65,25 +65,25 @@
   }
   p {
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   p:last-child {
     margin-bottom: 0;
   }
   ul {
-    padding-left: 20px;
+    padding-left: 1.25rem;
   }
   ul li {
-    padding-bottom: 10px;
+    padding-bottom: .625rem;
   }
   ul li:last-child {
     padding-bottom: 0;
   }
   .main-content ul, .main-content ol {
-    padding-bottom: 15px;
+    padding-bottom: .9375rem;
   }
   .main-content ul ul, .main-content ul ol, .main-content ol ol, .main-content ol ul {
-    padding-top: 10px;
+    padding-top: .625rem;
     padding-bottom: 0;
   }
   img {
