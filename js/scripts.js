@@ -16,6 +16,17 @@ $( document ).ready( function() {
 	setInterval(function () {
 	    $(".boxnav__item--next").click();
 	}, 5000);
+	/* mobile search */
+	$('.mobile-header-search').click(function(){
+		$(this).addClass('active');
+		$(this).find('input[type="search"]').focus();
+	});
+	$(document).on("click", function (event) {
+		if ($(event.target).closest(".mobile-header-search").length === 0) {
+			$('.mobile-header-search').removeClass('active');
+		}
+	});
+
 	setOwnCarousalPosition();
 	$('.ourProcess-wrapper .owl-carousel').owlCarousel({
 		autoWidth: true,
