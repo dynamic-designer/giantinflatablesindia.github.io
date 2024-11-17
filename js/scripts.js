@@ -58,9 +58,10 @@ $( document ).ready( function() {
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
 		responsive: {
 			0: {
-				items: 1
+				items: 1,
+				autoWidth: false,
 			},
-			600: {
+			575: {
 				items: 3
 			},
 			1000: {
@@ -77,7 +78,7 @@ $( document ).ready( function() {
 			0: {
 				items: 1
 			},
-			600: {
+			575: {
 				items: 3
 			},
 			1000: {
@@ -101,7 +102,7 @@ $( document ).ready( function() {
 			0: {
 				items: 1
 			},
-			600: {
+			575: {
 				items: 3
 			},
 			1000: {
@@ -118,7 +119,7 @@ $( document ).ready( function() {
 			0: {
 				items: 1
 			},
-			600: {
+			575: {
 				items: 3
 			},
 			1000: {
@@ -141,6 +142,21 @@ $( document ).ready( function() {
 		autoWidth: true,
 		items: 4,
 		margin: 40,
+		responsive : {
+			0 : {
+				items: 1,
+				autoWidth: false,
+			},
+			575 : {
+				margin: 10,
+			},
+			992 : {
+				margin: 20,
+			},
+			1700 : {
+				margin: 40,
+			}
+		},
 		onInitialized: function (event) {
 			slider1FirstSlideIndex = event.item.index; // to determine clone
 			highlightActiveItem(event);
@@ -187,24 +203,24 @@ $( document ).ready( function() {
 		smartSpeed: 800,
 		items: 1
 	});
-	$('.ourProcess-wrapper .owl-carousel').owlCarousel({
-		autoWidth: true,
-		loop: true,
-		margin: 0,
-		nav: true,
-		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 3
-			},
-			1000: {
-				items: 3
-			}
-		}
-	});
+	// $('.ourProcess-wrapper .owl-carousel').owlCarousel({
+	// 	autoWidth: true,
+	// 	loop: true,
+	// 	margin: 0,
+	// 	nav: true,
+	// 	navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1
+	// 		},
+	// 		575: {
+	// 			items: 3
+	// 		},
+	// 		1000: {
+	// 			items: 3
+	// 		}
+	// 	}
+	// });
 	// Select all elements with the class 'theme-stroke-heading .letters'
 	$('.theme-stroke-heading .letters').each(function () {
 		var $textWrapper = $(this);

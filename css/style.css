@@ -602,7 +602,6 @@
 .ourProcess-box .heading {
   display: inline-block;
   color: var(--black-color);
-  font-size: 2rem;
   margin-bottom: 1.25rem;
   text-transform: uppercase;
   transition: all 0.5s;
@@ -659,10 +658,14 @@
   padding: 0 3.75rem;
 }
 .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-item .item .btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: .625rem;
-  position: relative;
 }
 .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .active-item .btn {
   background: linear-gradient(#880105, var(--primary-color));
@@ -675,10 +678,10 @@
   background-color: var(--primary-color);
   content: "";
   position: absolute;
-  bottom: -0.6875rem;
   left: -1px;
+  bottom: -11px;
+  height: 11px;
   width: calc(100% + 2px);
-  height: .625rem;
 }
 .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-prev,
 .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-next {
@@ -723,7 +726,8 @@
   justify-content: center;
   border:1px solid var(--gray300);
   border-radius: var(--border-radius-xl);
-  height: 37.5rem;
+  min-height: 37.5rem;
+  height: 100%;
   padding: .625rem;
 }
 .ourProducts-content .owl-item.active .item > .row > .right .box {
