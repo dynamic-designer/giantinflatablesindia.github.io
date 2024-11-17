@@ -85,7 +85,30 @@
                         </div>
                         <div class="container-fluid d-flex align-items-center justify-content-between">
                             <div class="mobile-header-bottom-left d-flex align-items-center">
-                                <button class="mobile-menu-button" aria-label="mobile-menu"><img src="images/icons/home.png" alt="home-icon"></a></button>
+
+                                <div class="main-dropdown-nav-wrap">
+                                    <a href="javascript:;" class="hamburger d-flex align-items-center mobile-menu-button" aria-label="mobile-menu">
+                                        <img class="me-1" src="images/icons/menu.png" alt="menu-icon">
+                                    </a>
+                                    <div class="main-dropdown-nav">
+                                      <ul>
+                                        <li><a href="index.html" class="active"><span class="hover-underline-animation">Home</span></a></li>
+                                        <li><a href="about.html"><span class="hover-underline-animation">About</span></a></li>
+                                        <li>
+                                            <a href="our-products.html"><span class="hover-underline-animation">Our Products</span></a>
+                                            <ul>
+                                                <li><a href="#"><span class="hover-underline-animation">Product sub 1</span></a></li>
+                                                <li><a href="#"><span class="hover-underline-animation">Product sub 2</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="services.html"><span class="hover-underline-animation">Services</span></a></li>
+                                        <li><a href="downloads.html"><span class="hover-underline-animation">Downloads</span></a></li>
+                                        <li><a href="clients.html"><span class="hover-underline-animation">Clients</span></a></li>
+                                        <li><a href="blogs.html"><span class="hover-underline-animation">Blogs</span></a></li>
+                                        <li><a href="contact-us.html"><span class="hover-underline-animation">Contact Us</span></a></li>
+                                      </ul>
+                                    </div>
+                                </div>
                                 <div class="position-absolute mobile-header-search">
                                     <form class="main-header-search">
                                         <input type="search" placeholder="Type your idea here to inflate it...">
@@ -100,14 +123,37 @@
                 <div class="header-sticky position-fixed top-0 w-100 d-flex justify-content-between">
                     <div class="header-sticky-left">
                         <a href="index.html" class="header-sticky-logo"><img src="images/logo-rounded.png" alt="GI_logo"></a>
-                        <button class="header-sticky-menu-btn d-flex align-items-center" aria-label="menu-button"><img class="me-1" src="images/icons/menu.png" alt="menu-icon">Menu</button>
+                        <div class="main-dropdown-nav-wrap">
+                            <span class="hamburger-overlay"></span>
+                            <a href="javascript:;" class="hamburger hover-underline-animation header-sticky-menu-btn d-flex align-items-center">
+                                <img class="me-1" src="images/icons/menu.png" alt="menu-icon">Menu
+                            </a>
+                            <div class="main-dropdown-nav">
+                                <ul>
+                                    <li><a href="index.html" class="active"><span class="hover-underline-animation">Home</span></a></li>
+                                    <li><a href="about.html"><span class="hover-underline-animation">About</span></a></li>
+                                    <li>
+                                        <a href="our-products.html"><span class="hover-underline-animation">Our Products</span></a>
+                                        <ul>
+                                            <li><a href="#"><span class="hover-underline-animation">Product sub 1</span></a></li>
+                                            <li><a href="#"><span class="hover-underline-animation">Product sub 2</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="services.html"><span class="hover-underline-animation">Services</span></a></li>
+                                    <li><a href="downloads.html"><span class="hover-underline-animation">Downloads</span></a></li>
+                                    <li><a href="clients.html"><span class="hover-underline-animation">Clients</span></a></li>
+                                    <li><a href="blogs.html"><span class="hover-underline-animation">Blogs</span></a></li>
+                                    <li><a href="contact-us.html"><span class="hover-underline-animation">Contact Us</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="header-sticky-right d-flex align-items-center flex-auto justify-content-end">
                         <form class="main-header-search">
                             <input type="search" placeholder="Type your idea here to inflate it...">
                             <button type="submit"><img src="images/icons/search-icon.png" alt="search-icon"></button>
                         </form>
-                        <div class="d-flex justify-content-end main-header-contact ms-5">
+                        <div class="d-flex justify-content-end main-header-contact ms-xl-5 ms-4">
                             <a class="black-red-text hover-underline-animation d-flex align-items-center" href="tel:918758713931"><img src="images/icons/phone-icon.png" alt="phone-icon">+91 87587 &nbsp;<span>13931</span></a>
                             <a class="black-red-text hover-underline-animation d-flex align-items-center" href="mailto:sales@giantinflatables.in"><img src="images/icons/mail-icon.png" alt="mail-icon">sales@<span>giantinflatables.in</span></a>
                         </div>
@@ -130,7 +176,7 @@
                         <div class="slide__title-wrap">
                           <div class="banner-slider-content text-center">
                             <div class="theme-heading">
-                              <h2 class="banner-slider-heading heading-arial mb-0 custom-fadedowm">Custom <span>Inflatables</span></h2>
+                              <h2 class="h1 banner-slider-heading heading-arial mb-0 custom-fadedowm">Custom <span>Inflatables</span></h2>
                               <div class="banner-slider-desc heading-arial custom-fadedowm">
                                 <p>Supplying The Worlds Best Events</p>
                               </div>
@@ -148,7 +194,7 @@
                         <div class="slide__title-wrap">
                           <div class="banner-slider-content text-center">
                             <div class="theme-heading">
-                              <h2 class="banner-slider-heading heading-arial mb-0 custom-fadedowm">Lorem <span>Ipsum</span></h2>
+                              <h2 class="h1 banner-slider-heading heading-arial mb-0 custom-fadedowm">Lorem <span>Ipsum</span></h2>
                               <div class="banner-slider-desc heading-arial custom-fadedowm">
                                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                               </div>
@@ -212,7 +258,7 @@
                 <section class="section-wrapper">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>Process,</span>
@@ -221,12 +267,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
                                         Our Clients
-                                    </h2>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +401,7 @@
                 <section class="section-wrapper">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>Our</span>
@@ -364,12 +410,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
-                                        Our Client
-                                    </h2>
+                                        Our Clients
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -671,7 +717,7 @@
                 <section class="section-wrapper">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>About</span>
@@ -680,12 +726,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
-                                        Our Client
-                                    </h2>
+                                        Our Clients
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -825,7 +871,7 @@
                 <section class="section-wrapper bg-gray-grdient" data-bg-text="Clients">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>Our</span>
@@ -834,12 +880,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
-                                        Our Client
-                                    </h2>
+                                        Our Clients
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -875,7 +921,7 @@
                 <section class="section-wrapper">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>Our</span>
@@ -884,12 +930,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
-                                        Our Client
-                                    </h2>
+                                        Our Clients
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -959,7 +1005,7 @@
                 <section class="section-wrapper bg-gray">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>Main</span>
@@ -968,12 +1014,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
-                                        Our Client
-                                    </h2>
+                                        Our Clients
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -1074,7 +1120,7 @@
                 <section class="section-wrapper">
                     <div class="container">
                         <div class="row align-self-center pt-md-4 pb-md-3">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="theme-stroke-heading heading-hand-icon">
                                     <h2 class="letters heading heading-slabSerif">
                                         <span>Our</span>
@@ -1083,12 +1129,12 @@
                                     <img src="images/icons/hand.png" alt="hand-icon">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-md-flex justify-content-md-end align-items-md-center">
+                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
                                 <div class="theme-stroke-heading">
-                                    <h2 class="letters heading heading-sansSerif">
+                                    <h3 class="letters heading heading-sansSerif">
                                         <span>Makes Us Favourite of</span>
-                                        Our Client
-                                    </h2>
+                                        Our Clients
+                                    </h3>
                                 </div>
                             </div>
                         </div>
