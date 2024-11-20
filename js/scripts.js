@@ -52,6 +52,7 @@ $( document ).ready( function() {
 	setOwnCarousalPosition();
 	$('.ourProcess-wrapper .owl-carousel').owlCarousel({
 		autoWidth: true,
+		autoHeight: true,
 		loop: true,
 		margin: 0,
 		nav: true,
@@ -79,9 +80,9 @@ $( document ).ready( function() {
 				items: 1
 			},
 			575: {
-				items: 3
+				items: 2
 			},
-			1000: {
+			768: {
 				items: 3
 			}
 		}
@@ -103,9 +104,12 @@ $( document ).ready( function() {
 				items: 1
 			},
 			575: {
+				items: 2
+			},
+			768: {
 				items: 3
 			},
-			1000: {
+			992: {
 				items: 4
 			}
 		}
@@ -117,13 +121,20 @@ $( document ).ready( function() {
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
 		responsive: {
 			0: {
-				items: 1
+				items: 1,
+				margin: 0,
 			},
-			575: {
-				items: 3
+			768: {
+				items: 2,
+				margin: 20,
 			},
-			1000: {
-				items: 3
+			992: {
+				items: 3,
+				margin: 30,
+			},
+			1200: {
+				items: 3,
+				margin: 40,
 			}
 		}
 	});
