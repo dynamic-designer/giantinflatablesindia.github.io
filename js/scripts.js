@@ -334,6 +334,26 @@ $( document ).ready( function() {
 	$('.move-to-next').click(function () {
 		$('.ourProducts-topbar').find('.owl-prev').click(); // Trigger the click event on Slider Arrow Prev
 	});
+
+	/* downloads slider */
+	// $('.downloads-topbar .owl-carousel').owlCarousel({
+	// 	dots: false,
+	// 	mouseDrag: false,
+	// 	loop:true,
+	// 	// nav:true,
+	// 	navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+	// 	responsive:{
+	// 		0:{
+	// 			items:1,
+	// 		},
+	// 		575:{
+	// 			items:2,
+	// 		},
+	// 		992:{
+	// 			items:3,
+	// 		},
+	// 	}
+	// });
 	
 } );
 
