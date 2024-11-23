@@ -13,6 +13,7 @@
   --gray250: #DDDDDD;
   --gray300: #CCCCCC;
   --gray350: #BBBBBB;
+  --gray600: #777777;
   --border-radius-md: .625rem;
   --border-radius-lg: 1.25rem;
   --border-radius-xl: 2.25rem;
@@ -110,7 +111,7 @@
   left: 0;
 }
 .main-dropdown-nav ul {
-  padding: 0;
+  padding: .625rem 0;
   margin: 0;
   min-width: 17.5rem;
   background-color: var(--black-color);
@@ -127,7 +128,7 @@
 .main-dropdown-nav li a {
   display: block;
   color: var(--white-color);
-  padding: 10px 1.25rem;
+  padding: .75rem 1.25rem;
   text-align: left;
   text-transform: uppercase;
 }
@@ -354,6 +355,8 @@
   margin-top: .3125rem;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block !important;
+  width: auto !important;
 }
 /* main-header */
 .main-header {
@@ -981,6 +984,20 @@
   object-fit: contain;
   opacity: 0.5;
 }
+.card-profile-brochure {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.card-profile-brochure > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 .social-links a img {
   max-width: 2.625rem
 }
@@ -1073,4 +1090,68 @@
 }
 .footer-bottom-row.owl-carousel .owl-nav .owl-prev {
   right: 1rem;
+}
+/* about page */
+.breadcrumb {
+  margin: 3.75rem 0;
+}
+.breadcrumb-inner {
+  position: relative;
+  background-color: var(--gray200);
+  border: 1px solid var(--gray600);
+  border-radius: 1.25rem;
+}
+.breadcrumb-home img {
+  max-width: 3rem;
+}
+.breadcrumb-inner ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 3.125rem;
+}
+.breadcrumb-inner li {
+  position: relative;
+  padding-bottom: 0;
+  padding-left: .9375rem;
+  margin-left: .9375rem;
+  list-style: none;
+}
+.breadcrumb-inner li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 1px;
+  background-color: var(--gray600);
+}
+.breadcrumb-inner li a, .breadcrumb-inner li span {
+  display: block;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
+  text-transform: uppercase;
+}
+.breadcrumb-inner li a:hover, .breadcrumb-inner li a:focus {
+  color: var(--primary-color);
+}
+.breadcrumb-inner li span {
+  color: var(--primary-color);
+}
+.breadcrumb-inner .btn {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+.breadcrumb-inner .btn img {
+  max-width: 1.2rem;
+  min-width: 1.2rem;
+  margin-right: .4375rem;
+}
+.about-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: .625rem;
+  aspect-ratio: 1 / 0.55;
 }
