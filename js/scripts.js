@@ -89,7 +89,7 @@ $( document ).ready( function() {
 	});
 	$('.ourBlogs-wrapper .owl-carousel').owlCarousel({
 		loop: true,
-		margin: 0,
+		margin: 10,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
 		items: 1
@@ -122,7 +122,7 @@ $( document ).ready( function() {
 		responsive: {
 			0: {
 				items: 1,
-				margin: 0,
+				margin: 10,
 			},
 			768: {
 				items: 2,
@@ -138,6 +138,56 @@ $( document ).ready( function() {
 			}
 		}
 	});
+	/* footer sliders */
+	$('.connect-with-us .owl-carousel').owlCarousel({
+		loop: true,
+		margin: 50,
+		nav: true,
+		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		responsive: {
+			0: {
+				items: 1,
+				margin: 10,
+			},
+			640: {
+				items: 2,
+				margin: 20,
+			},
+			992: {
+				items: 3,
+				margin: 30,
+			},
+			1400: {
+				items: 4,
+				margin: 40,
+			}
+		}
+	});
+	$('.footer-bottom-row.owl-carousel').owlCarousel({
+		dots: false,
+		mouseDrag: false,
+		nav:true,
+		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		responsive:{
+			0:{
+				items:1,
+				loop:true,
+				autoplay: {
+					delay: 2000,
+				},
+			},
+			575:{
+				items:2,
+				loop:true,
+				autoplay: {
+					delay: 2000,
+				},
+			},
+			992:{
+				items:3,
+			},
+		}
+	});
 	// DOTS - NOT WORKING!!!
 	var slider1 = $('#pillsCarousel');
 	var slider2 = $('#previewCarousel');
@@ -150,22 +200,24 @@ $( document ).ready( function() {
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
 		smartSpeed: 800,
 		dots: false,
-		autoWidth: true,
-		items: 4,
 		margin: 40,
+		items: 4,
+		autoWidth: true,
 		responsive : {
 			0 : {
 				items: 1,
 				autoWidth: false,
 			},
 			575 : {
+				items: 2,
 				margin: 10,
 			},
 			992 : {
+				items: 3,
 				margin: 20,
 			},
-			1700 : {
-				margin: 40,
+			1500 : {
+				margin: 30,
 			}
 		},
 		onInitialized: function (event) {
@@ -212,7 +264,8 @@ $( document ).ready( function() {
 		nav: false,
 		dots: false,
 		smartSpeed: 800,
-		items: 1
+		items: 1,
+		margin: 10,
 	});
 	// $('.ourProcess-wrapper .owl-carousel').owlCarousel({
 	// 	autoWidth: true,
