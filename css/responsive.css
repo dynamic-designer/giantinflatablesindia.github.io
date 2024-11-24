@@ -244,6 +244,7 @@
         flex-direction: column;
         align-items: flex-start !important;
         padding: .125rem;
+        min-width: 18.75rem;
     }
     .breadcrumb-home {
         margin-left: .625rem;
@@ -253,6 +254,8 @@
         max-width: 2.5rem;
     }
     .breadcrumb-inner ul {
+        justify-content: center;
+        width: 95%;
         margin-right: .875rem;
     }
     .breadcrumb-inner ul li:first-child {

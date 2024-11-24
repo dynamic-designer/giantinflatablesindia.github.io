@@ -1135,6 +1135,7 @@
 }
 .breadcrumb-inner li a, .breadcrumb-inner li span {
   display: block;
+  font-size: 1rem;
   padding-top: .625rem;
   padding-bottom: .625rem;
   text-transform: uppercase;
@@ -1164,7 +1165,7 @@
 /* downloads page */
 .brochure-thumbnail {
   position: relative;
-  aspect-ratio: 1/0.725;
+  aspect-ratio: 1/0.7;
   border: 1px solid var(--gray300);
   background-color: var(--gray200);
   border-radius: 1.5rem;
@@ -1180,4 +1181,40 @@
 }
 .downloads-wrapper .btn {
   font-size: 1.375rem;
+}
+/* contact-page */
+.contact-page-form label{
+  font-size: 1rem;
+}
+.contact-page-form input, .contact-page-form select, .contact-page-form textarea {
+  font-size: 1rem;
+  color: var(--gray350);
+  max-width: 22.5rem;
+  width: 100%;
+  border: 1px solid var(--gray300);
+  border-radius: .625rem;
+  outline: none;
+}
+.contact-page-form input, .contact-page-form select {
+  height: 2.625rem;
+  padding: .3125rem 1.125rem;
+}
+.contact-page-form textarea {
+  height: 6.25rem;
+  padding: .75rem 1.125rem;
+}
+.contact-page-form input::placeholder, .contact-page-form textarea::placeholder {
+  color: var(--gray350);
+  opacity: 1;
+}
+.contact-page-form select option {
+  color: black;
+}
+.card-contact-right .about-middle-logo {
+  max-width: 7rem;
+  min-width: 7rem;
+  margin: 0 1.125rem 0 0;
+}
+.card-contact-right .about-middle-book {
+  margin: 0 1.125rem 0 0;
 }
