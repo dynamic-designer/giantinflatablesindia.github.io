@@ -277,6 +277,18 @@
     .breadcrumb-inner li a, .breadcrumb-inner li span {
         font-size: 12px;
     }
+    .client-tabs-head {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .client-tabs-col {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .client-tabs-col button::after, .client-tabs-col button::before {
+        bottom: -14px;
+    }
 }
 @media (max-width:575px) {
     .h1, h1 {
@@ -340,5 +352,11 @@
     }
     .footer-bottom {
         padding-bottom: 1.5rem;
+    }
+    .client-tabs-col button, .client-tabs-body .client-tabs-content {
+        border-radius: 1.25rem;
+    }
+    .client-tabs-col button img {
+        max-width: 100%;
     }
 }

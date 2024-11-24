@@ -354,6 +354,17 @@ $( document ).ready( function() {
 	// 		},
 	// 	}
 	// });
+
+	/* client tabs */
+	$('.client-tabs-body .client-tabs-content:first-child').fadeIn();
+	$('.client-tabs-col:first-child button').addClass('active');
+	$('.client-tabs-col button').click(function() {
+		$('.client-tabs-col button').removeClass('active');
+		$(this).addClass('active');
+		let match1 = $('.client-tabs-col button.active').attr('data-tab');
+		$('.client-tabs-content').removeClass('active').hide();
+		$(`.client-tabs-content[data-content="${match1}"]`).fadeIn();
+	});
 	
 } );
 
