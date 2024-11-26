@@ -289,6 +289,9 @@
     .client-tabs-col button::after, .client-tabs-col button::before {
         bottom: -14px;
     }
+    .error-home-icon img {
+        max-width: 10rem;
+    }
 }
 @media (max-width:575px) {
     .h1, h1 {

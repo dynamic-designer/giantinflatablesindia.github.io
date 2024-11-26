@@ -1,5 +1,6 @@
 var $ = jQuery.noConflict();
 $mainHeaderHeight = $('.main-header').outerHeight();
+$stickyHeaderHeight = $('.header-sticky').outerHeight();
 
 /* Script on ready
 ------------------------------------------------------------------------------*/
@@ -366,6 +367,8 @@ $( document ).ready( function() {
 		$(`.client-tabs-content[data-content="${match1}"]`).fadeIn();
 	});
 	
+	/* sticky sidebar top space */
+	$('.blogs-details-section .connect-block').css('top', $stickyHeaderHeight + 10);
 } );
 
 /* Script on load
