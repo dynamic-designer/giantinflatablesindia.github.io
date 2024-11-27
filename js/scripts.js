@@ -254,7 +254,6 @@ $( document ).ready( function() {
 	function highlightActiveItem(event) {
 		// Remove custom class from all items
 		slider1.find('.owl-item').removeClass('active-item');
-
 		// Add custom class to the currently active item
 		var activeIndex = event.item.index;
 		slider1.find('.owl-item').eq(activeIndex).addClass('active-item');
@@ -289,7 +288,6 @@ $( document ).ready( function() {
 	// Select all elements with the class 'theme-stroke-heading .letters'
 	$('.theme-stroke-heading .letters').each(function () {
 		var $textWrapper = $(this);
-
 		// Split each character into a span, adding an extra class if it's inside the <span>
 		$textWrapper.html($textWrapper.html().replace(/(<\/?span[^>]*>)|(\S)/g, function (match, p1, p2) {
 			if (p2) {
@@ -303,7 +301,6 @@ $( document ).ready( function() {
 			// Keep the original <span> tags
 			return p1 || '';
 		}));
-
 		// Function to play the animation
 		function playAnimation() {
 			anime.timeline({ loop: false })
@@ -325,7 +322,6 @@ $( document ).ready( function() {
 					delay: 1000
 				});
 		}
-
 		// Add hover event listeners using jQuery
 		$textWrapper.on('mouseenter', playAnimation);
 	});
@@ -335,26 +331,6 @@ $( document ).ready( function() {
 	$('.move-to-next').click(function () {
 		$('.ourProducts-topbar').find('.owl-prev').click(); // Trigger the click event on Slider Arrow Prev
 	});
-
-	/* downloads slider */
-	// $('.downloads-topbar .owl-carousel').owlCarousel({
-	// 	dots: false,
-	// 	mouseDrag: false,
-	// 	loop:true,
-	// 	// nav:true,
-	// 	navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
-	// 	responsive:{
-	// 		0:{
-	// 			items:1,
-	// 		},
-	// 		575:{
-	// 			items:2,
-	// 		},
-	// 		992:{
-	// 			items:3,
-	// 		},
-	// 	}
-	// });
 
 	/* client tabs */
 	$('.client-tabs-body .client-tabs-content:first-child').fadeIn();
@@ -368,7 +344,7 @@ $( document ).ready( function() {
 	});
 	
 	/* sticky sidebar top space */
-	$('.blogs-details-section .connect-block').css('top', $stickyHeaderHeight + 10);
+	$('.connect-block.stick').css('top', $stickyHeaderHeight + 10);
 } );
 
 /* Script on load

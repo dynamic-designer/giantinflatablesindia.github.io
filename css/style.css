@@ -177,6 +177,11 @@
   padding-top: .375rem;
   font-size: 90%;
 }
+.connect-block.stick {
+  position: sticky;
+  max-width: 27.5rem;
+  margin: 0 auto;
+}
 /* BOOTSTRAP
 ------------------------------------------------------------------------------*/
 .text-primary {
@@ -1342,15 +1347,42 @@
   max-width: 17.5rem;
 }
 /* blogs-details */
-.blogs-details-banner img {
+.blogs-details-banner {
   aspect-ratio: 1/0.5;
+  border-radius: 2.5rem;
+  background-color: var(--gray200);
+}
+.blogs-details-banner img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 2.5rem;
+  border-radius: inherit;
 }
-.blogs-details-section .connect-block {
-  position: sticky;
-  max-width: 27.5rem;
-  margin: 0 auto;
+/* search-result */
+.search-result-block {
+  aspect-ratio: 1/0.9;
+  border-radius: 2rem;
+  background-color: var(--gray200);
+  border: 1px solid var(--gray300);
+}
+.search-result-block img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+/* sub-categoty-detail page */
+.dropdown .btn {
+  border: 1px solid var(--gray300);
+  border-radius: .625rem;
+}
+.dropdown .dropdown-toggle::after {
+  display: none;
+}
+.dropdown .btn > img {
+  max-width: 2.1875rem;
+  min-width: 2.1875rem;
+}
+.dropdown:hover .dropdown-menu {
+  display: block !important;
 }
