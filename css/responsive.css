@@ -125,6 +125,10 @@
     .ourCategories-wrapper .owl-carousel .owl-nav .owl-next {
         left: -6rem;
     }
+    .catProductDescSection .row.container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 @media (max-width:847px) {
     .slideshow {
@@ -292,6 +296,25 @@
     .error-home-icon img {
         max-width: 10rem;
     }
+    .subCatDetail-pills .owl-carousel .owl-nav .owl-prev {
+        right: -3rem;
+    }
+    .subCatDetail-pills .owl-carousel {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: .625rem;
+    }
+    .catDetailSection .container .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .thankyou-block p {
+        font-size: 1.25rem;
+    }
+    .thankyou-mail-check {
+        max-width: 9.375rem;
+    }
 }
 @media (max-width:575px) {
     .h1, h1 {
@@ -361,5 +384,8 @@
     }
     .client-tabs-col button img {
         max-width: 100%;
+    }
+    .subCatDetail-pills .item {
+        text-align: center;
     }
 }

@@ -342,9 +342,48 @@ $( document ).ready( function() {
 		$('.client-tabs-content').removeClass('active').hide();
 		$(`.client-tabs-content[data-content="${match1}"]`).fadeIn();
 	});
-	
 	/* sticky sidebar top space */
 	$('.connect-block.stick').css('top', $stickyHeaderHeight + 10);
+	/* sub-categoty-detail slider */
+	var thumbnailSlider = new Swiper(".catDetailThumb", {
+		loop: true,
+		freeMode: true,
+		watchSlidesProgress: true,
+		navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {  
+			'0': {
+				slidesPerView: 3,
+				spaceBetween: 12,
+			},
+			'480': {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			'768': {
+				slidesPerView: 5,
+				spaceBetween: 25,
+			},
+			'1200': {
+				slidesPerView: 6,
+				spaceBetween: 30, 
+			},
+		},
+	});
+	var catDetailBig = new Swiper(".catDetailBig", {
+		loop: true,
+		spaceBetween: 30,
+		navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+		  swiper: thumbnailSlider,
+		},
+	});
+
 } );
 
 /* Script on load

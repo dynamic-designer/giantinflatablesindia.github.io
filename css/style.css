@@ -1148,6 +1148,7 @@
   padding-top: .625rem;
   padding-bottom: .625rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .breadcrumb-inner li a:hover, .breadcrumb-inner li a:focus {
   color: var(--primary-color);
@@ -1385,4 +1386,147 @@
 }
 .dropdown:hover .dropdown-menu {
   display: block !important;
+}
+.subCatDetail-pills .owl-carousel .owl-nav .owl-prev {
+  right: -4rem;
+}
+.subCatDetail-pills .item .btn {
+  line-height: 1;
+  white-space: nowrap;
+}
+.subCatDetail-pills .active-item .btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.subCatDetail-main {
+  padding: .75rem;
+  border: 1px solid var(--gray300);
+  border-radius: 2.5rem;
+  margin-top: 1.25rem;
+}
+.catDetailBig {
+  border-radius: 2.1875rem;
+}
+.subCatDetail-banner {
+  aspect-ratio: 1/0.55;
+  background-color: var(--gray200);
+  border-radius: 1.5625rem;
+}
+.subCatDetail-banner img, .subCatDetail-thumb img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.subCatDetail-thumb {
+  aspect-ratio: 1/0.7;
+  background-color: var(--gray200);
+  border-radius: 1.375rem;
+}
+.catDetailThumb {
+  margin-top: .9375rem;
+}
+.catDetailThumb .swiper-slide {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.catDetailThumb .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  display: none;
+}
+.swiper-button-prev {
+  right: .9375rem;
+  left: auto;
+}
+.swiper-button-next {
+  left: .9375rem;
+  right: auto;
+}
+/* sub category product page */
+.subCatProduct-section .ourProducts-content .row {
+  background-color: var(--white-color);
+}
+.subCatProduct-section .subCatProductBox {
+  position: relative;
+  display: block;
+  aspect-ratio: 1/0.73;
+  background-color: var(--gray200);
+  border-radius: 1.5625rem;
+  overflow: hidden;
+}
+.subCatProduct-section .subCatProductBox > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.subCatProductTitle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5625rem;
+  background-color: rgba(0,0,0, 0.8);
+}
+.subCatProduct-section .subCatProductBox .h4 {
+  color: var(--white-color);
+  margin-bottom: 0;
+  transition: 0.3s;
+}
+.subCatProduct-section .subCatProductBox:hover .h4 {
+  color: var(--primary-color);
+}
+.catProductDescSection .catProductDescRight {
+  max-width: 21.875rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.catProductRightBook {
+  max-width: 3.5rem;
+  margin: 0 .75rem 0 0 !important;
+}
+/* thankyou page */
+.thankyou-block {
+  position: relative;
+}
+.thankyou-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  max-width: 100rem;
+  width: 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+.thankyou-bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.thankyou-mail-check {
+  max-width: 15rem;
+  margin: 0 auto;
+}
+.thankyou-block .heading-slabSerif span > span {
+  color: var(--white-color);
+}
+.thankyou-block p {
+  font-size: 1.875rem;
+}
+.thankyou-block p a {
+  color: var(--primary-color);
+}
+.thankyou-block p a:hover, .thankyou-block p a:focus {
+  text-decoration: underline;
+}
+.thankyou-bottom {
+  max-width: 56.25rem;
+  margin: 0 auto;
 }

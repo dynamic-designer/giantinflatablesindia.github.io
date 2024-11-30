@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Blogs | Giant Inflatables</title>
+    <title>Sub Categories Product | Giant Inflatables</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="" />
     <meta name="keywords" content="">
@@ -12,14 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
     <link href="css/owl.carousel.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- start -->
-    <div class="wrapper overflow-hidden">
+    <div class="wrapper">
         <div class="main-container">
             <!-- header part -->
             <header class="main-header">
@@ -40,11 +41,11 @@
                                         <li><a href="index.html"><img src="images/icons/home.png" alt="home-icon"></a>
                                         </li>
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="our-products.html">Our Products</a></li>
+                                        <li class="active"><a href="our-products.html">Our Products</a></li>
                                         <li><a href="services.html">Services</a></li>
                                         <li><a href="downloads.html">Downloads</a></li>
                                         <li><a href="clients.html">Clients</a></li>
-                                        <li class="active"><a href="blogs.html">Blogs</a></li>
+                                        <li><a href="blogs.html">Blogs</a></li>
                                         <li><a href="contact-us.html">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -130,7 +131,7 @@
                                                         class="hover-underline-animation">Downloads</span></a></li>
                                             <li><a href="clients.html"><span
                                                         class="hover-underline-animation">Clients</span></a></li>
-                                            <li><a href="blogs.html" class="active"><span
+                                            <li><a href="blogs.html"><span
                                                         class="hover-underline-animation">Blogs</span></a></li>
                                             <li><a href="contact-us.html"><span
                                                         class="hover-underline-animation">Contact Us</span></a></li>
@@ -183,7 +184,7 @@
                                                 class="hover-underline-animation">Downloads</span></a></li>
                                     <li><a href="clients.html"><span
                                                 class="hover-underline-animation">Clients</span></a></li>
-                                    <li><a href="blogs.html" class="active"><span class="hover-underline-animation">Blogs</span></a>
+                                    <li><a href="blogs.html"><span class="hover-underline-animation">Blogs</span></a>
                                     </li>
                                     <li><a href="contact-us.html"><span class="hover-underline-animation">Contact
                                                 Us</span></a></li>
@@ -216,7 +217,8 @@
                     <div class="breadcrumb-inner d-flex align-items-center">
                         <a class="breadcrumb-home" href="index.html"><img src="images/icons/home.png" alt="home"></a>
                         <ul>
-                            <li><span>Blogs</span></li>
+                            <li><a href="#">Event - Exhibition - Advertising</a></li>
+                            <li><span>Sub Categoty Name Here - 1</span></li>
                         </ul>
                         <a class="btn btn-primary d-flex align-items-center py-md-2 py-1 px-md-3" href="#"><img src="images/icons/left-triangle.png" alt="back-arrow">Back</a>
                     </div>
@@ -225,73 +227,266 @@
             <!-- main content part -->
             <main>
 
-                <section class="mb-5">
+                <section class="section-wrapper subCatProduct-section pt-0">
                     <div class="container">
-                        <div class="row align-self-center mb-xl-5 mb-4">
-                            <div class="col-12 col-lg-6">
-                                <div class="theme-stroke-heading">
-                                    <h2 class="heading heading-slabSerif"><span>Our Blogs</span></h2>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
-                                <div class="theme-stroke-heading">
-                                    <h3 class="letters heading heading-sansSerif">
-                                        <span>Makes Us Favourite of</span>
-                                        Our Clients
-                                    </h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="ourProducts-wrapper">
+                                    <div class="ourProducts-topbar">
+                                        <div class="ourProducts-wrapper--left">
+                                            <div class="owl-carousel" id="pillsCarousel">
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>Event Exhibition Advertising Inflatable</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>Marketing PR Brand Inflatable</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>Sports Games Arena Inflatable</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>Custom Design Inflatable</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>First Sample Inflatable</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>Second Sample Inflatable</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="btn btn-outline-secondary py-md-2 px-md-3">
+                                                        <span>Third Sample Inflatable</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ourProducts-wrapper--right justify-content-end align-items-center d-md-flex d-none">
+                                            <a class="btn btn-primary py-md-2 px-md-3 mb-3" href="#">View All Products</a>
+                                        </div>
+                                    </div>
+                                    <div class="ourProducts-content">
+                                        <div class="owl-carousel" id="previewCarousel">
+                                            <div class="item">
+                                                <div class="row g-0">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="px-2">
+                                                            <a href="#" class="subCatProductBox">
+                                                                <img class="product-img" src="images/sub-category-product.webp" alt="sub-category-product" />
+                                                                <div class="subCatProductTitle text-center">
+                                                                    <h4 class="h4 text-uppercase">SUB CATEGORY NAME TITLE Here - 1</h4>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="px-2">
+                                                            <a href="#" class="subCatProductBox">
+                                                                <img class="product-img" src="images/sub-category-product-just-car.webp" alt="sub-category-product" />
+                                                                <div class="subCatProductTitle text-center">
+                                                                    <h4 class="h4 text-uppercase">SUB CATEGORY NAME TITLE Here - 1</h4>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="px-2">
+                                                            <a href="#" class="subCatProductBox">
+                                                                <!-- <img class="product-img" src="images/sub-category-product.webp" alt="sub-category-product" /> -->
+                                                                <div class="subCatProductTitle text-center">
+                                                                    <h4 class="h4 text-uppercase">SUB CATEGORY NAME TITLE Here - 1</h4>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="px-2">
+                                                            <a href="#" class="subCatProductBox">
+                                                                <!-- <img class="product-img" src="images/sub-category-product.webp" alt="sub-category-product" /> -->
+                                                                <div class="subCatProductTitle text-center">
+                                                                    <h4 class="h4 text-uppercase">SUB CATEGORY NAME TITLE Here - 1</h4>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="ourProducts-bottombar mt-md-0 mt-3">
+                                        <nav>
+                                            <ul class="pagination justify-content-center mt-md-4">
+                                                <li class="page-item">
+                                                    <a class="page-link move-to-prev" href="javascript:void(0);">
+                                                        <img class="flipX" src="images/icons/arrow.png" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link move-to-next" href="javascript:void(0);">
+                                                        <img class="" src="images/icons/arrow.png" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="text-center d-md-none d-block mt-4">
+                                        <a class="btn btn-primary py-md-2 px-md-3" href="#">View All Products</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
 
-                        <div class="downloads-wrapper">
-                            <div class="downloads-topbar">
-                                <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                        <h5 class="text-uppercase">LATEST BLOG 1 Description and Title Here and Title Here Title Here</h5>
-                                        <div class="brochure-thumbnail mb-3">
-                                            <!-- <img src="images/brochure-thumbnail.webp" alt="brochure-thumbnail"> -->
+                <section class="section-wrapper catProductDescSection overflow-unset">
+                    <div class="container">
+                        <div class="row container gx-xxl-5">
+                            <div class="col-lg-8 mb-md-5 mb-4">
+                                <div class="theme-stroke-heading mb-2">
+                                    <h2 class="heading heading-slabSerif"><span>DESCRIPTION</span></h2>
+                                </div>
+                                <h5 class="mb-0">Lorem ipsum dolor sit?</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quas saepe facilis quo sapiente veritatis cumque totam, commodi ullam, cupiditate nihil odit officiis molestias ad, non qu ibusdam ex consectetur ipsa minima suscipit quos dolor. Omnis perferendis suscipit ut voluptatibus porro dolores tempora voluptatem labore aut quas, distinctio quasi atque dicta ibusdam ex consectetur ipsa minima suscipit quos dolor. Omnis perferendis suscipit ut voluptatibus porro dolores tempora voluptatem labore aut quas, distinctio quasi atque dicta.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam odit natus animi nobis adipisci dolor vel magnam non laboriosam dolorum delectus reiciendis sint ea rem, hic quam eaque idcon sectetur adipisicing elit. Deserunt quibusdam odit natus animi nobis adipisci dolor vel magnam non laboriosam dolorum delectus reiciendis sint ea rem, hic quam eaque id.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quas saepe facilis quo sapiente veritatis cumque totam, commodi ullam, cupiditate nihil odit officiis molestias ad, non qu ibusdam ex consectetur ipsa minima suscipit quos dolor. Omnis perferendis suscipit ut voluptatibus porro dolores tempora voluptatem labore aut quas, distinctio quasi atque dicta ibusdam ex consectetur ipsa minima suscipit quos dolor. Omnis perferendis suscipit ut voluptatibus porro dolores tempora voluptatem labore aut quas, distinctio quasi atque dicta.</p>
+                            </div>
+                            <div class="col-lg-4 my-xl-5 mb-4 mt-lg-4">
+                                <div class="catProductDescRight">
+                                    <div class="connect-block">
+                                        <div class="card card-simple shadow-normal-gray p-0">
+                                            <div class="card-head">
+                                                <a href="#" class="btn btn-primary btn-icon d-flex  align-items-center justify-content-between"><img
+                                                        src="images/icons/phone-icon-big.png"
+                                                        alt="phone-icon">Request a Callback <img
+                                                        src="images/icons/hand-btn.png" alt="hand-icon"> </a>
+                                            </div>
+                                            <form action="" class="card-body p-3">
+                                                <div class="input-group mb-2">
+                                                    <span class="input-group-text" id="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-user">
+                                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                                                            </path>
+                                                            <circle cx="12" cy="7" r="4"></circle>
+                                                        </svg>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="Name"
+                                                        aria-label="">
+                                                </div>
+                                                <div class="input-group mb-2">
+                                                    <span class="input-group-text" id="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-smartphone">
+                                                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2">
+                                                            </rect>
+                                                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                                        </svg>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="Phone"
+                                                        aria-label="">
+                                                </div>
+                                                <div class="input-group mb-2">
+                                                    <span class="input-group-text" id="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-mail">
+                                                            <path
+                                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                            </path>
+                                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                                        </svg>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="Email"
+                                                        aria-label="">
+                                                </div>
+                                                <div class="input-group mb-2">
+                                                    <span class="input-group-text" id="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-globe">
+                                                            <circle cx="12" cy="12" r="10"></circle>
+                                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                                            <path
+                                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                    <select class="form-select" aria-label="Select Country"
+                                                        required="">
+                                                        <option value="" selected="">Select Country</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group mb-2">
+                                                    <span class="input-group-text" id="basic-addon1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-message-square">
+                                                            <path
+                                                                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                    <textarea class="form-control" id=""
+                                                        placeholder="Share Your Inflatables Requirement"
+                                                        rows="3"></textarea>
+                                                </div>
+                                                <div class="captcha mb-2">
+                                                    <img class="d-block w-80 mx-auto" src="images/captcha.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="text-center">
+                                                    <small class="text-danger fs-6 mb-1 d-block mb-4">We do not sell
+                                                        or rent information.</small>
+                                                    <button type="submit" class="btn btn-primary py-md-2 px-md-3 position-relative z-1" href="#">Submit</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                        <h5 class="text-uppercase">LATEST BLOG 2 Description and Title Here and Title Here Title Here</h5>
-                                        <div class="brochure-thumbnail mb-3">
-                                            <!-- <img src="images/brochure-thumbnail.webp" alt="brochure-thumbnail"> -->
+                                    <div class="d-flex align-items-center justify-content-center mt-5">
+                                        <div class="catProductRightBook mb-2">
+                                            <img src="images/book.jpg" alt="book" />
+                                        </div>
+                                        <div class="theme-stroke-heading">
+                                            <h3 class="heading heading-slabSerif">
+                                                <span><span>Product</span> Brochure</span>
+                                            </h3>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                        <h5 class="text-uppercase">LATEST BLOG 3 Description and Title Here and Title Here Title Here</h5>
-                                        <div class="brochure-thumbnail mb-3">
-                                            <!-- <img src="images/brochure-thumbnail.webp" alt="brochure-thumbnail"> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                        <h5 class="text-uppercase">LATEST BLOG 4 Description and Title Here and Title Here Title Here</h5>
-                                        <div class="brochure-thumbnail mb-3">
-                                            <!-- <img src="images/brochure-thumbnail.webp" alt="brochure-thumbnail"> -->
-                                        </div>
+                                    <div class="mt-3 text-center">
+                                        <a class="btn btn-primary py-md-2 px-4" href="#">Download</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="ourProducts-bottombar">
-                                <nav>
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item">
-                                            <a class="page-link move-to-prev" href="javascript:void(0);">
-                                                <img class="flipX" src="images/icons/arrow.png" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link move-to-next" href="javascript:void(0);">
-                                                <img class="" src="images/icons/arrow.png" alt="" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
-
                     </div>
                 </section>
 
@@ -431,57 +626,6 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="section-wrapper bg-gray-grdient" data-bg-text="Clients">
-                    <div class="container">
-                        <div class="row align-self-center pb-3">
-                            <div class="col-12 col-lg-6">
-                                <div class="theme-stroke-heading heading-hand-icon">
-                                    <h2 class="letters heading heading-slabSerif">
-                                        <span>Our</span>
-                                        Clients
-                                    </h2>
-                                    <img src="images/icons/hand.png" alt="hand-icon">
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 d-md-flex justify-content-lg-end align-items-md-center">
-                                <div class="theme-stroke-heading">
-                                    <h3 class="letters heading heading-sansSerif">
-                                        <span>Makes Us Favourite of</span>
-                                        Our Clients
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="ourClients-wrapper">
-                            <div class="owl-carousel">
-                                <div class="ourClient-box h-100">
-                                    <div class="ourClient-items">
-                                        <img class="img-fluid" src="images/tm-logo.png" alt="tm-logo" />
-                                    </div>
-                                </div>
-                                <div class="ourClient-box h-100">
-                                    <div class="ourClient-items">
-                                        <img class="img-fluid" src="images/reliance-logo.png" alt="reliance-logo" />
-                                    </div>
-                                </div>
-                                <div class="ourClient-box h-100">
-                                    <div class="ourClient-items">
-                                        <img class="img-fluid" src="images/jsw-logo.png" alt="jsw-logo" />
-                                    </div>
-                                </div>
-                                <div class="ourClient-box h-100">
-                                    <div class="ourClient-items">
-                                        <img class="img-fluid" src="images/tm-logo.png" alt="tm-logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
             </main>
         </div>
         <!-- footer part -->
@@ -683,7 +827,7 @@
                                         <li class="list-group-item text-uppercase"><a href="services.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Services</a></li>
                                         <li class="list-group-item text-uppercase"><a href="downloads.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Downloads</a></li>
                                         <li class="list-group-item text-uppercase"><a href="clients.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Clients</a></li>
-                                        <li class="list-group-item text-uppercase active"><a href="blogs.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Blogs</a></li>
+                                        <li class="list-group-item text-uppercase"><a href="blogs.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Blogs</a></li>
                                         <li class="list-group-item text-uppercase"><a href="contact-us.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Contact Us</a></li>
                                         <li class="list-group-item text-uppercase"><a href="sitemap.html" class="d-flex"><img src="images/icons/plus-circle.png" alt="plus-icon">Sitemap</a></li>
                                     </ul>
@@ -744,6 +888,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/anime.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
