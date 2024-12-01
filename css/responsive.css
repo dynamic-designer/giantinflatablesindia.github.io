@@ -230,12 +230,8 @@
     .ourProducts-content .owl-item .item > .row > .left {
         border-top-right-radius: 2.75rem;
         border-bottom-left-radius: 0;
-        padding-right:3px;
-        padding-left: 3px;
     }
     .ourProducts-content .owl-item .item > .row > .right {
-        padding-left: 3px;
-        padding-right: 3px;
         border-radius: 0;
     }
     .connect-block {
@@ -299,7 +295,7 @@
         margin-bottom: 10px;
     }
     .client-tabs-col button::after, .client-tabs-col button::before {
-        bottom: -14px;
+        bottom: -16px;
     }
     .error-home-icon img {
         max-width: 10rem;
