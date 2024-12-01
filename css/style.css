@@ -182,6 +182,10 @@
   max-width: 27.5rem;
   margin: 0 auto;
 }
+.connect-block textarea {
+  height: 4.375rem;
+  line-height: 1.2;
+}
 /* BOOTSTRAP
 ------------------------------------------------------------------------------*/
 .text-primary {
@@ -329,7 +333,7 @@
   margin-bottom: 0;
   text-shadow: .125rem .1875rem .3125rem rgba(0, 0, 0, 0.5);
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
 .heading-sansSerif span {
   color: var(--black-color);
@@ -374,17 +378,23 @@
 .main-header-wrap{
   display: flex;
 }
-.main-header-left {
-  display: flex;
-  align-items: center;
-}
 .main-header-left, .main-header-right {
   width: 27%;
 }
+.main-header-left {
+  display: flex;
+  align-items: flex-end;
+}
+.main-header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .main-header-logo {
   display: block;
-  max-width: 31.25rem;
+  max-width: 34.375rem;
   width: 100%;
+  margin-bottom: -2px;
 }
 .main-header-logo img {
   width: 100%;
@@ -444,7 +454,7 @@
   padding-bottom: 1.5625rem;
 }
 .main-header-contact a {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 .main-header-contact a img {
   min-width: 1.5625rem;
@@ -681,7 +691,7 @@
   height: 100%;
 }
 .ourProducts-topbar .ourProducts-wrapper--left {
-  width: calc(100% - 15.625rem);
+  width: calc(100% - 17.8125rem);
   padding: 0 3.75rem;
 }
 .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-item .item .btn {
@@ -693,7 +703,7 @@
   font-size: 1rem;
   line-height: 1.2;
   text-transform: uppercase;
-  margin-bottom: .625rem;
+  margin-bottom: .4375rem;
   margin-left: 2px;
   white-space: nowrap;
 }
@@ -822,7 +832,7 @@
   width: 2.625rem;
 }
 .ourProducts-topbar .owl-carousel .owl-item {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 /* ABOUT GIANT INFLATBLES
 ------------------------------------------------------------------------------*/
@@ -839,13 +849,27 @@
 .card-middle-heading {
   font-size: 3.25rem;
 }
+.about-section-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
 .about-section-big-img {
-  max-width: 43.75rem;
+  max-width: 43.125rem;
   margin: 0 auto;
 }
 .about-middle-logo {
   max-width: 6.25rem;
   margin: 0 auto;
+}
+.about-section-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .about-middle-book {
   max-width: 4.375rem;
@@ -894,10 +918,10 @@
 .ourCategories-wrapper {
   padding: 0 3.125rem;
 }
-.ourCategories-wrapper .owl-carousel .ourCategories-box {
+/* .ourCategories-wrapper .owl-carousel .ourCategories-box {
   background-color: var(--white-color);
-  border-radius: 1.875rem;
-}
+  border-radius: 2.75rem;
+} */
 .ourCategories-wrapper .owl-carousel .owl-item {
   padding: .3125rem 2rem;
 }
@@ -913,11 +937,11 @@
 }
 .ourCategories-box .card-header {
   background-image: linear-gradient(180deg, var(--white-color), var(--gray300));
-  border-top-left-radius: 1.5625rem;
-  border-top-right-radius: 1.5625rem;
+  border-radius: 0;
 }
-.ourCategories-box .rounded-custom{
-  border-radius: 1.7rem;
+.ourCategories-box .ourCategories-items{
+  border-radius: 2.5rem;
+  overflow: hidden;
 }
 .ourCategories-box .list-group-item {
   display: flex;
@@ -935,7 +959,7 @@
 .ourCategories-box .list-group-item img {
   min-width: 1.25rem;
   max-width: 1.25rem;
-  margin-right: .3125rem;
+  margin-right: .625rem;
 }
 /* OUR VENTURES
 ------------------------------------------------------------------------------*/
@@ -954,11 +978,12 @@
   text-align: center;
   padding: .3125rem .625rem;
   margin-bottom: 0;
+  border-radius: 2.5rem 2.5rem 0 0;
+  transition: 0.3s;
 }
-.ourVentures-box-heading.-red {
+.ourVentures-items:hover .ourVentures-box-heading {
   background-color: var(--primary-color);
   color: var(--white-color);
-  border-radius: 2.5rem 2.5rem 0 0;
 }
 .ourVentures-items .heading-slabSerif {
   font-size: 1.5625rem;
@@ -1228,14 +1253,14 @@
 /* clients page */
 .client-tabs-head {
   display: flex;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -40px;
+  margin-right: -40px;
 }
 .client-tabs-col {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   margin-bottom: 20px;
-  flex: auto;
+  width: 33.33%;
 }
 .client-tabs-col button img {
   max-width: 75%;
@@ -1246,6 +1271,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 1 / 0.67;
   width: 100%;
   height: 100%;
   padding: 1.5625rem;
