@@ -143,6 +143,12 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .ourBlogs-desc {
+        height: auto !important;
+    }
+    .ourBlogs-desc::before {
+        display: none;
+    }
 }
 @media (max-width:847px) {
     .slideshow {

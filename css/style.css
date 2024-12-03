@@ -958,6 +958,22 @@
   font-size: 3.3rem;
   line-height: 1.1;
 }
+.ourBlogs-desc {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ourBlogs-desc:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 40px;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--white-color) 95%);
+}
 /* OUR BLOGS
 ------------------------------------------------------------------------------*/
 .ourCategories-wrapper {

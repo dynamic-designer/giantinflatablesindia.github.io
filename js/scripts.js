@@ -345,44 +345,52 @@ $( document ).ready( function() {
 	/* sticky sidebar top space */
 	$('.connect-block.stick').css('top', $stickyHeaderHeight + 10);
 	/* sub-categoty-detail slider */
-	var thumbnailSlider = new Swiper(".catDetailThumb", {
-		loop: true,
-		freeMode: true,
-		watchSlidesProgress: true,
-		navigation: {
-		  nextEl: ".swiper-button-next",
-		  prevEl: ".swiper-button-prev",
-		},
-		breakpoints: {  
-			'0': {
-				slidesPerView: 3,
-				spaceBetween: 12,
+	if ($('.catDetailThumb').length > 0) {
+		var thumbnailSlider = new Swiper(".catDetailThumb", {
+			loop: true,
+			freeMode: true,
+			watchSlidesProgress: true,
+			navigation: {
+			  nextEl: ".swiper-button-next",
+			  prevEl: ".swiper-button-prev",
 			},
-			'480': {
-				slidesPerView: 4,
-				spaceBetween: 20,
+			breakpoints: {  
+				'0': {
+					slidesPerView: 3,
+					spaceBetween: 12,
+				},
+				'480': {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				'768': {
+					slidesPerView: 5,
+					spaceBetween: 25,
+				},
+				'1200': {
+					slidesPerView: 6,
+					spaceBetween: 30, 
+				},
 			},
-			'768': {
-				slidesPerView: 5,
-				spaceBetween: 25,
+		});
+		var catDetailBig = new Swiper(".catDetailBig", {
+			loop: true,
+			spaceBetween: 30,
+			navigation: {
+			  nextEl: ".swiper-button-next",
+			  prevEl: ".swiper-button-prev",
 			},
-			'1200': {
-				slidesPerView: 6,
-				spaceBetween: 30, 
+			thumbs: {
+			  swiper: thumbnailSlider,
 			},
-		},
-	});
-	var catDetailBig = new Swiper(".catDetailBig", {
-		loop: true,
-		spaceBetween: 30,
-		navigation: {
-		  nextEl: ".swiper-button-next",
-		  prevEl: ".swiper-button-prev",
-		},
-		thumbs: {
-		  swiper: thumbnailSlider,
-		},
-	});
+		});
+	};
+
+	/* blog-content-height */
+	ourBlogsBox = $('.ourBlogs-box').outerHeight();
+	ourBlogsHead = $('.ourBlogs-head').outerHeight();
+	$('.ourBlogs-desc').css('height', ourBlogsBox - ourBlogsHead - 57);
+	lineclamp();
 
 } );
 
@@ -402,6 +410,7 @@ $( window ).on( 'scroll',function() {
 ------------------------------------------------------------------------------*/
 $( window ).on( 'resize',function() {
 	setOwnCarousalPosition();
+	lineclamp();
 } );
 
 /* Script all functions
@@ -409,4 +418,9 @@ $( window ).on( 'resize',function() {
 function setOwnCarousalPosition() {
 	var leftSideOffset = $(".heading").offset().left;
 	$(".ourProcess-wrapper").css("padding-left", (leftSideOffset - 16) + "px");
+}
+function lineclamp() {
+	var lineheight = parseFloat($('.ourBlogs-desc p').css('line-height'));
+	var calc = parseInt(ourBlogsBox/lineheight);
+	$(".ourBlogs-desc").css({"-webkit-line-clamp": "" + calc + ""});
 }
