@@ -16,7 +16,7 @@
         font-size: 5.3125rem;
     }
     .main-header-logo {
-        max-width: 28.125rem;
+        max-width: 30rem;
     }
 }
 @media (max-width:1500px) {
@@ -65,6 +65,9 @@
         padding-left: 25px;
         padding-right: 25px;
     }
+    .ourBlogs-info .h3 {
+        font-size: 2.9rem;
+    }
 }
 @media (max-width:1199px) {
     .heading-arial, .mobile-header-middle-right .heading-slabSerif span > span, .heading-sansSerif span > span{
@@ -103,6 +106,9 @@
     }
     .ourVentures-items .heading-slabSerif {
         font-size: 1.25rem;
+    }
+    .ourBlogs-info .h3 {
+        font-size: 2.1875rem;
     }
 }
 @media (min-width:1200px) {
@@ -227,12 +233,18 @@
     .ourProducts-content .box {
         min-height: auto;
     }
+    .ourProducts-content .owl-item .item > .row {
+        box-shadow: none;
+    }
     .ourProducts-content .owl-item .item > .row > .left {
         border-top-right-radius: 2.75rem;
         border-bottom-left-radius: 0;
     }
     .ourProducts-content .owl-item .item > .row > .right {
         border-radius: 0;
+    }
+    .ourProducts-content .owl-item .item > .row > .left > .box {
+        box-shadow: 0px 0px .4375rem rgba(0, 0, 0, 0.2);
     }
     .connect-block {
         max-width: 25rem;
@@ -310,14 +322,17 @@
         padding-right: .625rem;
     }
     .catDetailSection .container .container {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
     .thankyou-block p {
         font-size: 1.25rem;
     }
     .thankyou-mail-check {
         max-width: 9.375rem;
+    }
+    .ourBlogs-info .h3 {
+        font-size: 1.5625rem;
     }
 }
 @media (max-width:575px) {
@@ -391,5 +406,8 @@
     }
     .subCatDetail-pills .item {
         text-align: center;
+    }
+    .card-middle-heading {
+        font-size: 2.75rem;
     }
 }

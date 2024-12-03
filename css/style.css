@@ -13,6 +13,7 @@
   --gray250: #DDDDDD;
   --gray300: #CCCCCC;
   --gray350: #BBBBBB;
+  --gray450: #999999;
   --gray600: #777777;
   --border-radius-md: .625rem;
   --border-radius-lg: 1.25rem;
@@ -46,7 +47,7 @@
 }
 .section-wrapper::after {
   content: attr(data-bg-text);
-  color: #fff;
+  color: var(--white-color);
   position: absolute;
   font-size: 29vw;
   letter-spacing: 1vw;
@@ -494,7 +495,7 @@
   padding-bottom: 1.5625rem;
 }
 .main-header-contact a {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 .main-header-contact a img {
   min-width: 1.5625rem;
@@ -953,6 +954,10 @@
 .ourBlogs-wrapper .owl-carousel .owl-nav .owl-prev, .ourBlogs-wrapper .owl-carousel .owl-nav .owl-next {
   transform: none;
 }
+.ourBlogs-info .h3 {
+  font-size: 3.3rem;
+  line-height: 1.1;
+}
 /* OUR BLOGS
 ------------------------------------------------------------------------------*/
 .ourCategories-wrapper {
@@ -1263,12 +1268,16 @@
 }
 .contact-page-form input, .contact-page-form select, .contact-page-form textarea {
   font-size: 1rem;
-  color: var(--gray350);
+  color: var(--gray450);
   max-width: 22.5rem;
   width: 100%;
   border: 1px solid var(--gray300);
   border-radius: .625rem;
   outline: none;
+}
+.contact-page-form input::placeholder, .contact-page-form textarea::placeholder {
+  color: var(--gray450) !important;
+  opacity: 1;
 }
 .contact-page-form input, .contact-page-form select {
   height: 2.625rem;
@@ -1281,6 +1290,9 @@
 .contact-page-form input::placeholder, .contact-page-form textarea::placeholder {
   color: var(--gray350);
   opacity: 1;
+}
+.contact-page-form-mail img {
+  max-width: 1.7rem;
 }
 .card-contact-right .about-middle-logo {
   max-width: 7rem;
@@ -1548,7 +1560,7 @@
   color: var(--primary-color);
 }
 .catProductDescSection .catProductDescRight {
-  max-width: 21.875rem;
+  max-width: 30.3125rem;
   margin-left: auto;
   margin-right: auto;
 }
