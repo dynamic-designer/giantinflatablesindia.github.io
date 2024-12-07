@@ -50,6 +50,58 @@ $( document ).ready( function() {
 		}
 	});
 
+	/* Home banner slider */
+	if ($('.home-banner-slider').length > 0) {
+		var homeBannerSliderActive = ".home-banner-slider";
+		var homeBannerSliderInit = new Swiper(homeBannerSliderActive, {
+			loop: true,
+			slidesPerView: 1,
+			effect: "fade",
+			speed: 3000,
+			autoplay: {
+				delay: 7000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: ".banner__dot",
+				clickable: true,
+			},
+		});
+		/* Home banner slide animation */
+		function animated_swiper(selector, init) {
+			var animated = function animated() {
+				$(selector + " [data-animation]").each(function () {
+					var anim = $(this).data("animation");
+					var delay = $(this).data("delay");
+					var duration = $(this).data("duration");
+					$(this)
+						.removeClass("anim" + anim)
+						.addClass(anim + " animated")
+						.css({
+							webkitAnimationDelay: delay,
+							animationDelay: delay,
+							webkitAnimationDuration: duration,
+							animationDuration: duration,
+						})
+						.one("animationend", function () {
+							$(this).removeClass(anim + " animated");
+						});
+				});
+			};
+			animated();
+			init.on("slideChange", function () {
+				$(homeBannerSliderActive + " [data-animation]").removeClass("animated");
+			});
+			init.on("slideChange", animated);
+		}
+		animated_swiper(homeBannerSliderActive, homeBannerSliderInit);
+	}
+	/* Home banner end */
+
 	setOwnCarousalPosition();
 	$('.ourProcess-wrapper .owl-carousel').owlCarousel({
 		autoWidth: true,
@@ -58,6 +110,8 @@ $( document ).ready( function() {
 		margin: 0,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive: {
 			0: {
 				items: 1,
@@ -76,6 +130,8 @@ $( document ).ready( function() {
 		margin: 0,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive: {
 			0: {
 				items: 1
@@ -93,13 +149,17 @@ $( document ).ready( function() {
 		margin: 10,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
-		items: 1
+		items: 1,
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 	});
 	$('.ourCategories-wrapper .owl-carousel').owlCarousel({
 		loop: true,
 		margin: 0,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive: {
 			0: {
 				items: 1
@@ -120,6 +180,8 @@ $( document ).ready( function() {
 		margin: 50,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive: {
 			0: {
 				items: 1,
@@ -145,6 +207,8 @@ $( document ).ready( function() {
 		margin: 50,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive: {
 			0: {
 				items: 1,
@@ -169,6 +233,8 @@ $( document ).ready( function() {
 		mouseDrag: false,
 		nav:true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive:{
 			0:{
 				items:1,
@@ -193,17 +259,19 @@ $( document ).ready( function() {
 	var slider1 = $('#pillsCarousel');
 	var slider2 = $('#previewCarousel');
 	var slider1FirstSlideIndex; // to determine clone
-	var prevIndex = 0; // to determine the direction
+	var prevIndex = 1; // to determine the direction
 	// slider1
 	slider1.owlCarousel({
 		loop: true,
 		nav: true,
 		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
-		smartSpeed: 800,
+		// smartSpeed: 800,
 		dots: false,
 		margin: 40,
 		items: 4,
 		autoWidth: true,
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 		responsive : {
 			0 : {
 				items: 1,
@@ -263,9 +331,11 @@ $( document ).ready( function() {
 		loop: true,
 		nav: false,
 		dots: false,
-		smartSpeed: 800,
+		// smartSpeed: 800,
 		items: 1,
 		margin: 10,
+		autoplay: 2000,
+		autoplaySpeed: 1000,
 	});
 	// $('.ourProcess-wrapper .owl-carousel').owlCarousel({
 	// 	autoWidth: true,
@@ -273,6 +343,8 @@ $( document ).ready( function() {
 	// 	margin: 0,
 	// 	nav: true,
 	// 	navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
+	//	autoplay: 2000,
+	// 	autoplaySpeed: 1000,
 	// 	responsive: {
 	// 		0: {
 	// 			items: 1

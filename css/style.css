@@ -626,18 +626,40 @@
 }
 
 /* home-banner */
-.slideshow, .slide {
+.home-banner-slider {
   height: 80vh;
+}
+.home-banner-slider .swiper-slide {
+  overflow: hidden;
+}
+.home-banner-slider .slide-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transform: scale(1);
+  -webkit-transition: all 9s ease-out 0s;
+  -moz-transition: all 9s ease-out 0s;
+  -ms-transition: all 9s ease-out 0s;
+  -o-transition: all 9s ease-out 0s;
+  transition: all 9s ease-out 0s;
+}
+.home-banner-slider .swiper-slide-active .slide-bg {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  transform: scale(1.3);
 }
 .slide__title-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.boxnav__item {
-  height: 3.125rem;
-  width: 3.125rem;
-  padding: 0;
+  height: 100%;
 }
 .banner-slider-desc {
   font-size: 2.5rem;
@@ -923,6 +945,9 @@
   padding: 0 6.25rem;
 }
 .ourClients-wrapper .owl-carousel .ourClient-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--white-color);
   border-radius: 2.5rem;
   padding: 3.125rem;
@@ -1527,6 +1552,9 @@
 .catDetailThumb .swiper-slide-thumb-active {
   opacity: 1;
 }
+.swiper-button-prev, .swiper-button-next {
+  width: 2.625rem;
+}
 .swiper-button-prev:after, .swiper-button-next:after {
   display: none;
 }
@@ -1623,4 +1651,27 @@
 .thankyou-bottom {
   max-width: 56.25rem;
   margin: 0 auto;
+}
+
+/* image hover shine effect */
+.image-hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+.image-hover-effect::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, .3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+  pointer-events: none;
+}
+.image-hover-effect:hover::before {
+  height: 250%;
+  transition: all 600ms linear;
+  background-color: transparent;
 }

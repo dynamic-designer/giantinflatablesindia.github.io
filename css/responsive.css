@@ -1,8 +1,3 @@
-/* @media (min-width: 1700px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-      max-width: 1650px;
-    }
-} */
 @media (max-width:1900px) {
     html {
         font-size: 95%;
@@ -94,11 +89,14 @@
     .main-header-search {
         max-width: 20rem;
     }
-    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot, .boxnav__item, .ourProducts-bottombar .pagination .page-item .page-link img {
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot, .boxnav__item, .ourProducts-bottombar .pagination .page-item .page-link img, .swiper-button-prev, .swiper-button-next {
         max-width: 2.1875rem;
     }
     .owl-carousel .owl-nav .owl-next {
         left: -2.3125rem;
+    }
+    .home-banner-slider {
+        height: 600px;
     }
     .ourCategories-wrapper .owl-carousel .owl-item {
         padding-left: 1rem;
@@ -150,11 +148,6 @@
         display: none;
     }
 }
-@media (max-width:847px) {
-    .slideshow {
-        margin-top: 0;
-    }
-}
 @media (max-width:767px) {
     .h1, h1 {
         font-size: 3.25rem;
@@ -195,7 +188,7 @@
     .btn-icon img:nth-child(2){
         margin-left: 1rem;
     }
-    .slideshow, .slide {
+    .home-banner-slider {
         height: 400px;
     }
     .banner-slider-heading {
@@ -216,7 +209,7 @@
     .owl-carousel .owl-nav .owl-prev img, .owl-carousel .owl-nav .owl-next img {
         width: 2rem;
     }
-    .boxnav__item--prev, .boxnav__item--next {
+    .swiper-button-prev, .swiper-button-next {
         display: none;
     }
     .heading-hand-icon img {
@@ -354,7 +347,7 @@
     .header-sticky .main-header-contact {
         display: none !important;
     }
-    .slideshow, .slide {
+    .home-banner-slider {
         height: 200px;
     }
     .banner-slider-desc {
@@ -363,14 +356,8 @@
     .section-wrapper {
         margin-bottom: 1rem;
     }
-    /* .ourProcess-wrapper {
-        margin-top: 30px;
-    } */
     .ourProcess-box {
         width: 95%;
-        /* height: 100%;
-        margin-top: 0;
-        margin-bottom: 0; */
     }
     .ourProcess-wrapper .owl-carousel::after {
         display: none;
