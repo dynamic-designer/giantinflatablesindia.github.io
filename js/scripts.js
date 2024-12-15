@@ -49,7 +49,6 @@ $( document ).ready( function() {
 			$('.mobile-header-search').removeClass('active');
 		}
 	});
-
 	/* Home banner slider */
 	if ($('.home-banner-slider').length > 0) {
 		var homeBannerSliderActive = ".home-banner-slider";
@@ -101,7 +100,6 @@ $( document ).ready( function() {
 		animated_swiper(homeBannerSliderActive, homeBannerSliderInit);
 	}
 	/* Home banner end */
-
 	setOwnCarousalPosition();
 	$('.ourProcess-wrapper .owl-carousel').owlCarousel({
 		autoWidth: true,
@@ -255,108 +253,52 @@ $( document ).ready( function() {
 			},
 		}
 	});
-	// DOTS - NOT WORKING!!!
-	var slider1 = $('#pillsCarousel');
-	var slider2 = $('#previewCarousel');
-	var slider1FirstSlideIndex; // to determine clone
-	var prevIndex = 1; // to determine the direction
-	// slider1
-	slider1.owlCarousel({
-		loop: true,
-		nav: true,
-		navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
-		// smartSpeed: 800,
-		dots: false,
-		margin: 40,
-		items: 4,
-		autoWidth: true,
-		autoplay: 2000,
-		autoplaySpeed: 1000,
-		responsive : {
-			0 : {
-				items: 1,
-				autoWidth: false,
-			},
-			575 : {
-				items: 2,
-				margin: 10,
-			},
-			992 : {
-				items: 3,
-				margin: 20,
-			},
-			1500 : {
-				margin: 30,
-			}
-		},
-		onInitialized: function (event) {
-			slider1FirstSlideIndex = event.item.index; // to determine clone
-			highlightActiveItem(event);
-		},
-		onTranslate: function (event) {
-			sliderSync(event);
-			highlightActiveItem(event);
+	/* product slider with tabs */
+	if ($('.ourProducts-wrapper').length > 0) {
+		let currentIndex = 0;
+		const totalItems = $('.ourProducts-content .item').length;
+		const autoplayInterval = 5000; // Interval in milliseconds (5 seconds)
+		const tabsContainer = $('.tabs');
+		// Function to move to the correct slide
+		function goToSlide(index) {
+			if (index >= totalItems) index = 0;
+			if (index < 0) index = totalItems - 1;
+			// Update carousel slide
+			$('.ourProducts-content').css('transform', 'translateX(' + (-index * 100) + '%)');
+			$('.indicator').removeClass('active');
+			$('.indicator').eq(index).addClass('active');
+			currentIndex = index;
+			// Update active tab
+			$('.tab').removeClass('active');
+			const activeTab = $('.tab[data-tab="' + (index + 1) + '"]');
+			activeTab.addClass('active');
+			// Calculate the scroll position for the tabs container
+			let scrollLeft = 0;
+			activeTab.prevAll().each(function() {
+				scrollLeft += $(this).outerWidth(true); // Sum the widths of all previous tabs
+			});
+			// Center the active tab in the tabs container
+			tabsContainer.animate({ scrollLeft: scrollLeft }, 300); // Smooth scroll effect for tabs
 		}
-	});
-	function sliderSync(event) {
-		var index = event.item.index;
-		var loop = event.relatedTarget.options.loop;
-		var slider2CloneCount = slider2.find('.owl-item.cloned').length / 2;
-
-		if (loop) {
-			if (index < slider1FirstSlideIndex) { // if active slide is clone
-				slider2.trigger('prev.owl.carousel');
-			} else {
-				if (event.item.count === 2 && event.item.index === 2 && prevIndex === 3) { // if two slides and trigger = next
-					slider2.trigger('next.owl.carousel');
-				} else {
-					slider2.trigger('to.owl.carousel', index - slider2CloneCount);
-				}
-			}
-
-			prevIndex = event.item.index; // to determine the direction
-		} else {
-			slider2.trigger('to.owl.carousel', index);
-		}
-	}
-	function highlightActiveItem(event) {
-		// Remove custom class from all items
-		slider1.find('.owl-item').removeClass('active-item');
-		// Add custom class to the currently active item
-		var activeIndex = event.item.index;
-		slider1.find('.owl-item').eq(activeIndex).addClass('active-item');
-	}
-	// slider2
-	slider2.owlCarousel({
-		loop: true,
-		nav: false,
-		dots: false,
-		// smartSpeed: 800,
-		items: 1,
-		margin: 10,
-		autoplay: 2000,
-		autoplaySpeed: 1000,
-	});
-	// $('.ourProcess-wrapper .owl-carousel').owlCarousel({
-	// 	autoWidth: true,
-	// 	loop: true,
-	// 	margin: 0,
-	// 	nav: true,
-	// 	navText: ["<img src='images/icons/arrow.png'>", "<img src='images/icons/arrow.png'>"],
-	//	autoplay: 2000,
-	// 	autoplaySpeed: 1000,
-	// 	responsive: {
-	// 		0: {
-	// 			items: 1
-	// 		},
-	// 		575: {
-	// 			items: 3
-	// 		},
-	// 		1000: {
-	// 			items: 3
-	// 		}
-	// 	}
-	// });
+		// Arrow navigation
+		$('.ourProducts-wrapper .owl-next').click(function() { goToSlide(currentIndex + 1); });
+		$('.ourProducts-wrapper .owl-prev').click(function() { goToSlide(currentIndex - 1); });
+		$('.indicator').click(function() {
+			const index = $(this).data('slide') - 1;
+			goToSlide(index);
+		});
+		// Tab navigation
+		$('.tab').click(function() {
+			const index = $(this).data('tab') - 1;
+			goToSlide(index);
+		});
+		// Autoplay functionality
+		setInterval(function() {
+			goToSlide(currentIndex + 1);
+		}, autoplayInterval); // Move to next slide every 5 seconds
+		goToSlide(currentIndex); // Initialize the first slide
+	};
+	
 	// Select all elements with the class 'theme-stroke-heading .letters'
 	$('.theme-stroke-heading .letters').each(function () {
 		var $textWrapper = $(this);
@@ -397,13 +339,6 @@ $( document ).ready( function() {
 		// Add hover event listeners using jQuery
 		$textWrapper.on('mouseenter', playAnimation);
 	});
-	$('.move-to-prev').click(function () {
-		$('.ourProducts-topbar').find('.owl-next').click(); // Trigger the click event on Slider Arrow Next
-	});
-	$('.move-to-next').click(function () {
-		$('.ourProducts-topbar').find('.owl-prev').click(); // Trigger the click event on Slider Arrow Prev
-	});
-
 	/* client tabs */
 	$('.client-tabs-body .client-tabs-content:first-child').fadeIn();
 	$('.client-tabs-col:first-child button').addClass('active');
@@ -457,13 +392,11 @@ $( document ).ready( function() {
 			},
 		});
 	};
-
 	/* blog-content-height */
 	ourBlogsBox = $('.ourBlogs-box').outerHeight();
 	ourBlogsHead = $('.ourBlogs-head').outerHeight();
 	$('.ourBlogs-desc').css('height', ourBlogsBox - ourBlogsHead - 57);
 	lineclamp();
-
 } );
 
 /* Script on load

@@ -749,15 +749,34 @@
 ------------------------------------------------------------------------------*/
 .ourProducts-topbar {
   display: flex;
+  align-items: flex-end;
 }
-.ourProducts-topbar .item, .ourProducts-topbar .item .btn {
+.ourProducts-topbar .owl-carousel .owl-item {
+  margin-bottom: 6px;
+}
+.ourProducts-topbar .item, .ourProducts-topbar .btn {
   height: 100%;
 }
 .ourProducts-topbar .ourProducts-wrapper--left {
-  width: calc(100% - 17.8125rem);
+  position: relative;
+  width: calc(100% - 15.9375rem);
   padding: 0 3.75rem;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-item .item .btn {
+.ourProducts-wrapper--left .owl-carousel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+}
+.ourProducts-topbar .ourProducts-wrapper--left .tabs {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease; 
+}
+.ourProducts-topbar .ourProducts-wrapper--left .btn {
   position: relative;
   display: flex;
   justify-content: center;
@@ -767,17 +786,21 @@
   line-height: 1.2;
   text-transform: uppercase;
   margin-bottom: .4375rem;
-  margin-left: 2px;
+  margin-right: 2.5rem;
   white-space: nowrap;
+  transition: 0.3s;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .active-item .btn {
+.ourProducts-topbar .ourProducts-wrapper--left .btn:last-child {
+  margin-right: 0;
+}
+.ourProducts-topbar .ourProducts-wrapper--left .btn.active {
   background: linear-gradient(#880105, var(--primary-color));
   border-color: var(--primary-color);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   color: var(--white-color);
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .active-item .btn::after {
+.ourProducts-topbar .ourProducts-wrapper--left .btn.active::after {
   background-color: var(--primary-color);
   content: "";
   position: absolute;
@@ -786,38 +809,46 @@
   height: 11px;
   width: calc(100% + 2px);
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-prev,
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-next {
+.ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev,
+.ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next {
   top: 40%;
   transform: translateY(-50%);
+  pointer-events: all;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-prev {
-  right: -3.75rem;
+.ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev {
+  right: 0;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-next {
-  left: -3.75rem;
+.ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next {
+  left: 0;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-prev img,
-.ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-next img {
+.ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev img,
+.ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next img {
   width: 2.625rem;
 }
 .ourProducts-topbar .ourProducts-wrapper--right {
-  width: 15.625rem;
+  width: 100%;
+  padding-right: 1.7rem;
 }
-.ourProducts-content .owl-item .item > .row {
+.ourProducts-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.ourProducts-content .item {
+  min-width: 100%;
+}
+.ourProducts-content .item > .row {
   padding-top: .625rem;
   margin-left: .3125rem;
   margin-right: .3125rem;
-  box-shadow: 0px 0px .4375rem rgba(0, 0, 0, 0.2);
 }
-.ourProducts-content .owl-item .item > .row {
+.ourProducts-content .item > .row {
   position: relative;
   border-radius: var(--border-radius-xl);
   border-bottom-left-radius: 2.625rem;
   border-bottom-right-radius: 2.625rem;
   z-index: 1;
 }
-.ourProducts-content .owl-item .item > .row::before {
+.ourProducts-content .item > .row::before {
   content: "";
   position: absolute;
   top: 0;
@@ -828,12 +859,12 @@
   border-radius: inherit;
   z-index: -1;
 }
-.ourProducts-content .owl-item .item > .row > .left {
+.ourProducts-content .item > .row > .left {
   background-color: var(--white-color);
   border-top-left-radius: 2.75rem;
   border-bottom-left-radius: 2.75rem;
 }
-.ourProducts-content .owl-item .item > .row > .right {
+.ourProducts-content .item > .row > .right {
   background-color: var(--white-color);
   border-top-right-radius: 2.75rem;
   border-bottom-right-radius: 2.75rem;
@@ -848,8 +879,9 @@
   min-height: 37.5rem;
   height: 100%;
   padding: .625rem;
+  box-shadow: 0px 0px .4375rem rgba(0, 0, 0, 0.2);
 }
-.ourProducts-content .owl-item .item > .row > .right .box {
+.ourProducts-content .item > .row > .right .box {
   padding: 1.25rem;
 }
 .ourProducts-content .box .product-img {
@@ -863,14 +895,14 @@
 .ourProducts-content .box .product-details p {
   font-size: 1rem;
 }
-.ourProducts-bottombar .pagination {
+.ourProducts-bottombar .carousel-indicators  {
+  position: static;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
+  margin: 0;
 }
-.ourProducts-bottombar .pagination .page-item {
-  padding-bottom: 0;
-}
-.ourProducts-bottombar .pagination .page-item .page-link {
+.ourProducts-bottombar .owl-nav .indicator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -879,24 +911,25 @@
   font-size: 1.125rem;
   height: 2.625rem;
   width: 2.625rem;
+  border: 1px solid var(--gray300);
+  cursor: pointer;
+  transition: 0.3s;
 }
-.ourProducts-bottombar .pagination .page-item:first-child .page-link,
-.ourProducts-bottombar .pagination .page-item:last-child .page-link {
-  border: 0 none;
-  padding: 0;
-  background-color: transparent;
-  box-shadow: none;
+.ourProducts-bottombar .owl-nav .indicator:hover {
+  border-color: var(--bs-btn-hover-border-color);
 }
-.ourProducts-bottombar .pagination .page-item.active .page-link {
+.ourProducts-bottombar .owl-nav .indicator.active {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   color: var(--white-color);
 }
-.ourProducts-bottombar .pagination .page-item .page-link img {
-  width: 2.625rem;
+.ourProducts-bottombar .owl-nav button {
+  position: static !important;
+  min-width: 2.8125rem;
+  transform: none !important;
 }
-.ourProducts-topbar .owl-carousel .owl-item {
-  margin-bottom: 6px;
+.ourProducts-bottombar .owl-nav button img {
+  width: 2.625rem;
 }
 /* ABOUT GIANT INFLATBLES
 ------------------------------------------------------------------------------*/

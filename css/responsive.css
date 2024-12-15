@@ -206,7 +206,7 @@
         margin-left: .3125rem;
         margin-right: .3125rem;
     }
-    .owl-carousel .owl-nav .owl-prev img, .owl-carousel .owl-nav .owl-next img {
+    .owl-carousel .owl-nav .owl-prev img, .owl-carousel .owl-nav .owl-next img, .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev img, .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next img {
         width: 2rem;
     }
     .swiper-button-prev, .swiper-button-next {
@@ -232,18 +232,12 @@
     .ourProducts-content .box {
         min-height: auto;
     }
-    .ourProducts-content .owl-item .item > .row {
-        box-shadow: none;
-    }
-    .ourProducts-content .owl-item .item > .row > .left {
+    .ourProducts-content .item > .row > .left {
         border-top-right-radius: 2.75rem;
         border-bottom-left-radius: 0;
     }
-    .ourProducts-content .owl-item .item > .row > .right {
+    .ourProducts-content .item > .row > .right {
         border-radius: 0;
-    }
-    .ourProducts-content .owl-item .item > .row > .left > .box {
-        box-shadow: 0px 0px .4375rem rgba(0, 0, 0, 0.2);
     }
     .connect-block {
         max-width: 25rem;
@@ -362,16 +356,15 @@
     .ourProcess-wrapper .owl-carousel::after {
         display: none;
     }
-    .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-item .item .btn {
+    .ourProducts-topbar .ourProducts-wrapper--left .btn {
         white-space: normal;
-        width: 99%;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        min-width: 100%;
+        margin-bottom: -3px;
     }
-    .ourProducts-topbar .owl-item .item, .ourProducts-topbar .owl-item .item .btn {
+    .ourProducts-topbar, .ourProducts-topbar .btn {
         height: 100%;
     }
-    .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-prev, .ourProducts-topbar .ourProducts-wrapper--left .owl-carousel .owl-nav .owl-next {
+    .ourProducts-topbar .ourProducts-wrapper--left .owl-prev, .ourProducts-topbar .ourProducts-wrapper--left .owl-next {
         top: 1.75rem;
     }
     .ourVentures-wrapper .owl-carousel .owl-nav .owl-prev {
