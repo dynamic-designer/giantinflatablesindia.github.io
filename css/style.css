@@ -1435,7 +1435,7 @@
   border-left: 3px solid var(--primary-color);
 }
 .client-tabs-col:last-child button span {
-  left: -18px;
+  left: -17px;
   border-right: 3px solid var(--primary-color);
 }
 .client-tabs-col button::before {

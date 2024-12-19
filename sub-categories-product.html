@@ -275,12 +275,12 @@
                                         </div>
                                     </div>
                                     <div class="ourProducts-content">
-                                        <div class="owl-carousel" id="previewCarousel">
-                                            <div class="item wow fadeInUp" data-wow-offset="200">
+                                        <div class="owl-car" id="previewCarousel">
+                                            <div class="item">
                                                 <div class="row g-0">
                                                     <div class="col-md-6 mb-3">
                                                         <div class="px-2">
-                                                            <a href="#" class="subCatProductBox">
+                                                            <a href="#" class="subCatProductBox wow flipInX" data-wow-offset="200">
                                                                 <div class="image-hover-effect">
                                                                     <img class="product-img" src="images/sub-category-product.webp" alt="sub-category-product" />
                                                                 </div>
@@ -292,7 +292,7 @@
                                                     </div>
                                                     <div class="col-md-6 mb-3">
                                                         <div class="px-2">
-                                                            <a href="#" class="subCatProductBox">
+                                                            <a href="#" class="subCatProductBox wow flipInX" data-wow-offset="200">
                                                                 <div class="image-hover-effect">
                                                                     <img class="product-img" src="images/sub-category-product-just-car.webp" alt="sub-category-product" />
                                                                 </div>
@@ -304,7 +304,7 @@
                                                     </div>
                                                     <div class="col-md-6 mb-3">
                                                         <div class="px-2">
-                                                            <a href="#" class="subCatProductBox">
+                                                            <a href="#" class="subCatProductBox wow flipInX" data-wow-offset="200">
                                                                 <div class="image-hover-effect">
                                                                     <!-- <img class="product-img" src="images/sub-category-product.webp" alt="sub-category-product" /> -->
                                                                 </div>
@@ -316,7 +316,7 @@
                                                     </div>
                                                     <div class="col-md-6 mb-3">
                                                         <div class="px-2">
-                                                            <a href="#" class="subCatProductBox">
+                                                            <a href="#" class="subCatProductBox wow flipInX" data-wow-offset="200">
                                                                 <div class="image-hover-effect">
                                                                     <!-- <img class="product-img" src="images/sub-category-product.webp" alt="sub-category-product" /> -->
                                                                 </div>
@@ -331,23 +331,15 @@
 
                                         </div>
                                     </div>
-                                    <div class="ourProducts-bottombar mt-md-0 mt-3">
-                                        <nav>
-                                            <ul class="pagination justify-content-center mt-md-4">
-                                                <li class="page-item">
-                                                    <a class="page-link move-to-prev" href="javascript:void(0);">
-                                                        <img class="flipX" src="images/icons/arrow.png" alt="" />
-                                                    </a>
-                                                </li>
-                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link move-to-next" href="javascript:void(0);">
-                                                        <img class="" src="images/icons/arrow.png" alt="" />
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
+                                    <div class="ourProducts-bottombar owl-carousel d-flex justify-content-center mt-2">
+                                        <div class="owl-nav d-inline-flex align-items-center justify-content-center gap-3">
+                                            <button type="button" role="presentation" class="owl-next"><img src="images/icons/arrow.png"></button>
+                                            <div class="carousel-indicators gap-2">
+                                                <span class="indicator active" data-slide="1">1</span>
+                                                <span class="indicator" data-slide="2">2</span>
+                                            </div>
+                                            <button type="button" role="presentation" class="owl-prev"><img src="images/icons/arrow.png"></button>
+                                        </div>
                                     </div>
                                     <div class="text-center d-md-none d-block mt-4">
                                         <a class="btn btn-animated py-md-2 px-md-3" href="#">View All Products</a>
@@ -362,7 +354,7 @@
                     <div class="container">
                         <div class="row container">
                             <div class="col-lg-8 mb-4">
-                                <div class="shadow-normal-gray rounded-custom px-4 py-3 h-100">
+                                <div class="shadow-normal-gray rounded-custom px-4 py-3 h-100 wow fadeInLeft" data-wow-offset="200">
                                     <div class="theme-stroke-heading mb-2">
                                         <h2 class="heading heading-slabSerif"><span>DESCRIPTION</span></h2>
                                     </div>
@@ -373,7 +365,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-4">
-                                <div class="catProductDescRight shadow-normal-gray rounded-custom p-xl-5 p-4">
+                                <div class="catProductDescRight shadow-normal-gray rounded-custom p-xl-5 p-4 wow fadeInRight" data-wow-offset="200">
                                     <div class="connect-block">
                                         <div class="card card-simple shadow-normal-gray p-0">
                                             <div class="card-head">
