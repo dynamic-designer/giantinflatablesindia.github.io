@@ -39,7 +39,7 @@
     .banner-slider-heading {
         margin-bottom: .625rem !important;
     }
-    .banner-slider-desc {
+    .home-banner-desc {
         font-size: 1.875rem;
     }
     .owl-carousel .owl-dots .owl-dot span {
@@ -94,9 +94,6 @@
     }
     .owl-carousel .owl-nav .owl-next {
         left: -2.3125rem;
-    }
-    .home-banner-slider {
-        height: 600px;
     }
     .ourCategories-wrapper .owl-carousel .owl-item {
         padding-left: 1rem;
@@ -189,15 +186,24 @@
         margin-left: 1rem;
     }
     .home-banner-slider {
-        height: 400px;
+        min-height: 280px;
+        height: auto;
+    }
+    .home-banner-slider-dots {
+        bottom: 10% !important;
+        .swiper-pagination-bullet {
+            width: .8125rem;
+            height: .8125rem;
+            margin: 0 .3125rem !important;
+        }
     }
     .banner-slider-heading {
         margin-bottom: .3125rem !important;
     }
-    .banner-slider-desc {
+    .home-banner-desc {
         font-size: 1.5625rem;
     }
-    .banner-slider-desc p {
+    .home-banner-desc p {
         line-height: 1;
     }
     .owl-carousel .owl-dots .owl-dot span {
@@ -343,10 +349,7 @@
     .header-sticky .main-header-contact {
         display: none !important;
     }
-    .home-banner-slider {
-        height: 200px;
-    }
-    .banner-slider-desc {
+    .home-banner-desc {
         font-size: 1.3125rem;
     }
     .section-wrapper {

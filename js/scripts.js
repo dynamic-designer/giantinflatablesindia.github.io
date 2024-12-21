@@ -66,7 +66,7 @@ $( document ).ready( function() {
 				prevEl: '.swiper-button-prev',
 			},
 			pagination: {
-				el: ".banner__dot",
+				el: ".home-banner-slider-dots",
 				clickable: true,
 			},
 		});
