@@ -89,10 +89,11 @@
   left: 0;
   background-color: var(--primary-color);
   transition: transform 0.25s ease-out;
-  transform-origin: left;
+  transform-origin: right;
 }
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 /* hamburger menu */
 .hamburger-overlay {
@@ -636,6 +637,7 @@
 }
 .home-banner-slider .swiper-slide {
   overflow: hidden;
+  cursor: pointer;
 }
 .home-banner-slider .slide-bg {
   position: absolute;
