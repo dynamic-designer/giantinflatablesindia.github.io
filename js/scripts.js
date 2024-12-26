@@ -300,7 +300,7 @@ $( document ).ready( function() {
 	};
 	
 	// Select all elements with the class 'theme-stroke-heading .letters'
-	$('.theme-stroke-heading .letters').each(function () {
+	/*$('.theme-stroke-heading .letters').each(function () {
 		var $textWrapper = $(this);
 		// Split each character into a span, adding an extra class if it's inside the <span>
 		$textWrapper.html($textWrapper.html().replace(/(<\/?span[^>]*>)|(\S)/g, function (match, p1, p2) {
@@ -338,7 +338,7 @@ $( document ).ready( function() {
 		}
 		// Add hover event listeners using jQuery
 		//$textWrapper.on('mouseenter', playAnimation);
-	});
+	})*/;
 	/* client tabs */
 	$('.client-tabs-body .client-tabs-content:first-child').fadeIn();
 	$('.client-tabs-col:first-child button').addClass('active');
