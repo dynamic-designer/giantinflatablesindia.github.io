@@ -337,7 +337,7 @@ $( document ).ready( function() {
 				});
 		}
 		// Add hover event listeners using jQuery
-		$textWrapper.on('mouseenter', playAnimation);
+		//$textWrapper.on('mouseenter', playAnimation);
 	});
 	/* client tabs */
 	$('.client-tabs-body .client-tabs-content:first-child').fadeIn();
