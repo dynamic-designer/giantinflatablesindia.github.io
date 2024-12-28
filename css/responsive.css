@@ -86,9 +86,6 @@
     .btn-icon img:nth-child(2){
         margin-left: 1.25rem;
     }
-    .main-header-search {
-        max-width: 20rem;
-    }
     .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot, .boxnav__item, .ourProducts-bottombar .pagination .page-item .page-link img, .swiper-button-prev, .swiper-button-next {
         max-width: 2.1875rem;
     }
@@ -109,6 +106,9 @@
 @media (min-width:1200px) {
     .hamburger:hover ~ .main-dropdown-nav, .hamburger-overlay:hover ~ .main-dropdown-nav, .main-dropdown-nav:hover {
         display: block !important;
+    }
+    .breadcrumb-inner .btn {
+        padding-top: 0.6rem !important;
     }
 }
 @media (max-width:991px) {
@@ -159,14 +159,21 @@
         font-size: 1.5625rem;
     } 
     .mobile-header-middle-right .heading-slabSerif.-small {
-        font-size: 1.25rem;
+        font-size: 1.375rem;
+        z-index: 0;
+    }
+    .mobile-header-middle-right .heading-slabSerif.-small > span {
+        letter-spacing: 0.2px;
+    }
+    .mobile-header-middle-right .heading-slabSerif.-small > span span {
+        letter-spacing: 1px;
     }
     .mobile-header-middle-right .heading-slabSerif.-big {
         font-size: 1.875rem;
         line-height: 1;
     }
     .mobile-header-logo {
-        max-width: 4.375rem;
+        max-width: 5rem;
     }
     .header-sticky-right {
         flex-wrap: wrap;
@@ -351,7 +358,7 @@
         font-size: 2.5rem;
     }
     .header-sticky-logo {
-        max-width: 3.75rem;
+        max-width: 4.375rem;
     }
     .header-sticky .main-header-contact {
         display: none !important;
