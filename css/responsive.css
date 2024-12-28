@@ -335,6 +335,13 @@
     .ourBlogs-info .h3 {
         font-size: 1.5625rem;
     }
+    .requestCallbackModal .modal-dialog .modal-content .btn-close-wrap {
+        right: -1.5rem;
+    }
+    .requestCallbackModal .modal-dialog .modal-content .btn-close {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
 }
 @media (max-width:575px) {
     .h1, h1 {

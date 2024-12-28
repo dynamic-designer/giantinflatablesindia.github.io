@@ -1581,6 +1581,9 @@
 .dropdown:hover .dropdown-menu {
   display: block !important;
 }
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: var(--white-color);
+}
 .subCatDetail-pills .owl-carousel .owl-nav .owl-prev {
   right: -4rem;
 }
@@ -1754,4 +1757,37 @@
 /* wow animation */
 .wow {
   visibility: hidden;
+}
+
+/* modal */
+.requestCallbackModal {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+.requestCallbackModal .modal-dialog {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.requestCallbackModal .modal-dialog .modal-content {
+  background-color: transparent;
+  border: 0 none;
+  margin-left: -0.9375rem;
+}
+.requestCallbackModal .modal-dialog .modal-content .btn-close-wrap {
+  position: absolute;
+  top: 0;
+  right: -3rem;
+  padding: 0;
+}
+.requestCallbackModal .modal-dialog .modal-content .btn-close {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.75rem;
+  width: 1.75rem;
+  opacity: 1;
+  z-index: 1;
+  filter: invert();
 }
