@@ -36,6 +36,10 @@
     .main-header-logo {
         max-width: 25rem;
     }
+    .main-header-menu li a {
+        padding: .3125rem .625rem;
+        font-size: 1rem;
+    }
     .banner-slider-heading {
         margin-bottom: .625rem !important;
     }
@@ -102,6 +106,9 @@
     .ourBlogs-info .h3 {
         font-size: 2.1875rem;
     }
+    .breadcrumb {
+        padding-top: 0;
+    }
 }
 @media (min-width:1200px) {
     .hamburger:hover ~ .main-dropdown-nav, .hamburger-overlay:hover ~ .main-dropdown-nav, .main-dropdown-nav:hover {
@@ -143,6 +150,9 @@
     }
     .ourBlogs-desc::before {
         display: none;
+    }
+    .catDetailMainBox {
+        overflow: hidden;
     }
 }
 @media (max-width:767px) {
@@ -222,7 +232,7 @@
     .owl-carousel .owl-nav .owl-prev img, .owl-carousel .owl-nav .owl-next img, .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev img, .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next img {
         width: 2rem;
     }
-    .swiper-button-prev, .swiper-button-next {
+    .home-banner-slider .swiper-button-prev, .home-banner-slider .swiper-button-next {
         display: none;
     }
     .heading-hand-icon img {
@@ -320,14 +330,9 @@
     .error-home-icon img {
         max-width: 10rem;
     }
-    .subCatDetail-pills .owl-carousel .owl-nav .owl-prev {
-        right: -3rem;
-    }
-    .subCatDetail-pills .owl-carousel {
-        max-width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-right: .625rem;
+    .subCatDetail-pills-slider {
+        margin-left: 2.8125rem;
+        margin-right: 2.8125rem;
     }
     .catDetailSection .container .container {
         padding-left: 1.25rem;
@@ -414,10 +419,18 @@
     .client-tabs-col button img {
         max-width: 100%;
     }
-    .subCatDetail-pills .item {
-        text-align: center;
-    }
     .card-middle-heading {
         font-size: 2.75rem;
+    }
+    .catDetailThumb {
+        padding-left: 4.375rem;
+        padding-right: 4.375rem;
+    }
+    .catDetailThumb::before, .catDetailThumb::after {
+        width: 4.375rem;
+    }
+    .slick-slider .item {
+        margin-right: .3125rem;
+        margin-left: .3125rem;
     }
 }

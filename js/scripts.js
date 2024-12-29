@@ -199,6 +199,72 @@ $( document ).ready( function() {
 			}
 		}
 	});
+
+	/* subCatDetail-pills slider */
+	if ($('.subCatDetail-pills-slider').length > 0) {
+		$('.subCatDetail-pills-slider').slick({
+			infinite: true,
+			slidesToShow: 4,
+			prevArrow:"<button class='slick-prev'><img src='images/icons/arrow.png'></button>",
+			nextArrow:"<button class='slick-next'><img src='images/icons/arrow.png'></button>",
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 3,
+					},
+				}, {
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+					},
+				}, {
+					breakpoint: 575,
+					settings: {
+						slidesToShow: 1,
+					},
+				},
+			],
+		});
+	}
+	/* subCatProducts-pills slider */
+	if ($('.subCatProducts-pills-main-slider').length > 0) {
+		$('.subCatProducts-pills-main-slider').slick({
+			infinite: true,
+			variableWidth: true,
+			prevArrow:"<button class='slick-prev'><img src='images/icons/arrow.png'></button>",
+			nextArrow:"<button class='slick-next'><img src='images/icons/arrow.png'></button>",
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 575,
+					settings: {
+						variableWidth: false,
+						slidesToShow: 1,
+					},
+				},
+			],
+		});
+	}
+	if ($('.subCatProducts-pills-inner-slider').length > 0) {
+		$('.subCatProducts-pills-inner-slider').slick({
+			infinite: true,
+			variableWidth: true,
+			prevArrow:"<button class='slick-prev'><img src='images/icons/arrow.png'></button>",
+			nextArrow:"<button class='slick-next'><img src='images/icons/arrow.png'></button>",
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 575,
+					settings: {
+						variableWidth: false,
+						slidesToShow: 1,
+					},
+				},
+			],
+		});
+	}
 	/* footer sliders */
 	$('.connect-with-us .owl-carousel').owlCarousel({
 		loop: true,
@@ -297,7 +363,7 @@ $( document ).ready( function() {
 			goToSlide(currentIndex + 1);
 		}, autoplayInterval); // Move to next slide every 5 seconds
 		goToSlide(currentIndex); // Initialize the first slide
-	};
+	};	
 	
 	// Select all elements with the class 'theme-stroke-heading .letters'
 	/*$('.theme-stroke-heading .letters').each(function () {
@@ -364,17 +430,25 @@ $( document ).ready( function() {
 			breakpoints: {  
 				'0': {
 					slidesPerView: 3,
-					spaceBetween: 12,
+					spaceBetween: 10,
 				},
 				'480': {
 					slidesPerView: 4,
-					spaceBetween: 20,
+					spaceBetween: 15,
 				},
 				'768': {
 					slidesPerView: 5,
-					spaceBetween: 25,
+					spaceBetween: 20,
+				},
+				'992': {
+					slidesPerView: 4,
+					spaceBetween: 25, 
 				},
 				'1200': {
+					slidesPerView: 5,
+					spaceBetween: 25, 
+				},
+				'1500': {
 					slidesPerView: 6,
 					spaceBetween: 30, 
 				},
@@ -383,6 +457,10 @@ $( document ).ready( function() {
 		var catDetailBig = new Swiper(".catDetailBig", {
 			loop: true,
 			spaceBetween: 30,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
 			navigation: {
 			  nextEl: ".swiper-button-next",
 			  prevEl: ".swiper-button-prev",
