@@ -372,15 +372,13 @@
 .heading-slabSerif {
   font-family: "AcklinCondensed", sans-serif;
   font-weight: lighter;
+  color: var(--primary-color);
   letter-spacing: 1px;
   margin-bottom: 0;
   position: relative;
   z-index: 1;
 }
 .heading-slabSerif span {
-  color: var(--primary-color);
-}
-.heading-slabSerif span > span {
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--black-color);
