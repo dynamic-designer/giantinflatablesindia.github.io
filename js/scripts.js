@@ -21,7 +21,7 @@ $( document ).ready( function() {
 		}
 	});
 	$('.main-dropdown-nav ul li ul').parent().addClass('has-child');
-	$('.main-dropdown-nav ul li.has-child').prepend('<button class="menu-open-button"><img src="images/icons/double-line-down-angle.svg" alt="down-angle">menu-open-button</button>');
+	$('.main-dropdown-nav ul li.has-child').prepend('<button class="menu-open-button">+</button>');
 	$('.menu-open-button').click( function() {
 		$(this).toggleClass('child-open');
 		$(this).parent().find('ul').slideToggle();
@@ -475,6 +475,8 @@ $( document ).ready( function() {
 	ourBlogsHead = $('.ourBlogs-head').outerHeight();
 	$('.ourBlogs-desc').css('height', ourBlogsBox - ourBlogsHead - 57);
 	lineclamp();
+	blogDetailTitle = $('.blog-detail-title').outerHeight();
+	$('.blog-detail-connect-block').css('margin-top',blogDetailTitle + 14);
 } );
 
 /* Script on load
