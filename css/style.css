@@ -318,10 +318,7 @@
 .owl-carousel .owl-nav .owl-next img, .slick-slider .slick-next img {
   transform: rotate(180deg);
 }
-.slick-slider .item {
-  margin-right: 2.5rem;
-}
-.slick-slider .item .btn {
+.slick-slider .item > .btn {
   width: 100%;
   padding: .8125rem;
   line-height: 1;
@@ -853,8 +850,11 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: transform 0.3s ease; 
+}
+.ourProducts-topbar .tabs .btn {
+  padding: .8125rem;
 }
 .ourProducts-topbar .ourProducts-wrapper--left .btn {
   position: relative;
@@ -870,7 +870,7 @@
   white-space: nowrap;
   transition: 0.3s;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .btn.active, .subCatProducts-pills-main-slider .item.slick-current .btn {
+.ourProducts-topbar .ourProducts-wrapper--left .btn.slick-current, .subCatProducts-pills-main-slider .item.slick-current .btn {
   background: linear-gradient(#880105, var(--primary-color));
   border-color: var(--primary-color);
   border-bottom-left-radius: 0;
@@ -892,8 +892,11 @@
   width: calc(100% + 2px);
   opacity: 0;
 }
-.ourProducts-topbar .ourProducts-wrapper--left .btn.active::after, .subCatProducts-pills-main-slider .item.slick-current .btn::after {
+.ourProducts-topbar .ourProducts-wrapper--left .btn.slick-current::after, .subCatProducts-pills-main-slider .item.slick-current .btn::after {
   opacity: 1;
+}
+.subCatProducts-pills-main-slider .item, .subCatProducts-pills-inner-slider .item {
+  margin-right: 2.5rem;
 }
 .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev,
 .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next {
@@ -922,7 +925,7 @@
 .ourProducts-content > .item {
   min-width: 100%;
 }
-.ourProducts-content > .item > .row {
+.ourProducts-content > .item > .row, .ourProducts-content .item.slick-slide > .row {
   position: relative;
   margin-left: .3125rem;
   margin-right: .3125rem;
@@ -933,15 +936,15 @@
   border-top-right-radius: 2.6875rem;
   z-index: 1;
 }
-.ourProducts-content > .item > .row > .left {
+.ourProducts-content > .item > .row > .left, .ourProducts-content .item.slick-slide > .row .left {
   background-color: var(--white-color);
   border-top-left-radius: 2.75rem;
   border-bottom-left-radius: 2.75rem;
 }
-.ourProducts-content > .item > .row > .left .box {
+.ourProducts-content > .item > .row > .left .box, .ourProducts-content .item.slick-slide > .row > .left .box {
   aspect-ratio: 1/0.65;
 }
-.ourProducts-content > .item > .row > .right {
+.ourProducts-content > .item > .row > .right, .ourProducts-content .item.slick-slide > .row > .right {
   background-color: var(--white-color);
   border-top-right-radius: 2.75rem;
   border-bottom-right-radius: 2.75rem;
@@ -958,7 +961,7 @@
   padding: .625rem;
   box-shadow: 0px 0px .4375rem rgba(0, 0, 0, 0.2);
 }
-.ourProducts-content .item > .row > .right .box {
+.ourProducts-content .item > .row > .right .box, .ourProducts-content .item.slick-slide > .row > .right .box {
   padding: 1.25rem;
 }
 .ourProducts-content .box .product-img {
@@ -1006,6 +1009,12 @@
 }
 .ourProducts-bottombar .owl-nav button img {
   width: 2.625rem;
+}
+.ourProducts-content-slider .slick-track {
+  display: flex;
+}
+.ourProducts-content-slider .slick-slide {
+  height: auto;
 }
 /* ABOUT GIANT INFLATBLES
 ------------------------------------------------------------------------------*/

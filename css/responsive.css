@@ -386,9 +386,8 @@
     .ourProcess-wrapper .owl-carousel::after {
         display: none;
     }
-    .ourProducts-topbar .ourProducts-wrapper--left .btn {
+    .ourProducts-topbar .ourProducts-wrapper--left .btn:not(.slick-slide), .ourProducts-topbar .ourProducts-wrapper--left .btn  {
         white-space: normal;
-        min-width: 100%;
         margin-bottom: -3px;
     }
     .ourProducts-topbar, .ourProducts-topbar .btn {
@@ -433,8 +432,12 @@
     .catDetailThumb::before, .catDetailThumb::after {
         width: 4.375rem;
     }
-    .slick-slider .item {
+    .subCatProducts-pills-main-slider .item, .subCatProducts-pills-inner-slider .item, .ourProducts-topbar .tabs .btn {
         margin-right: .3125rem;
         margin-left: .3125rem;
+    }
+    .slick-slider .item > .btn, .ourProducts-topbar .tabs .btn {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 }

@@ -321,90 +321,35 @@ $( document ).ready( function() {
 	});
 	/* product slider with tabs */
 	if ($('.ourProducts-wrapper').length > 0) {
-		let currentIndex = 0;
-		const totalItems = $('.ourProducts-content .item').length;
-		const autoplayInterval = 5000; // Interval in milliseconds (5 seconds)
-		const tabsContainer = $('.tabs');
-		// Function to move to the correct slide
-		function goToSlide(index) {
-			if (index >= totalItems) index = 0;
-			if (index < 0) index = totalItems - 1;
-			// Update carousel slide
-			$('.ourProducts-content').css('transform', 'translateX(' + (-index * 100) + '%)');
-			$('.indicator').removeClass('active');
-			$('.indicator').eq(index).addClass('active');
-			currentIndex = index;
-			// Update active tab
-			$('.tab').removeClass('active');
-			const activeTab = $('.tab[data-tab="' + (index + 1) + '"]');
-			activeTab.addClass('active');
-			// Calculate the scroll position for the tabs container
-			let scrollLeft = 0;
-			activeTab.prevAll().each(function() {
-				scrollLeft += $(this).outerWidth(true); // Sum the widths of all previous tabs
-			});
-			// Center the active tab in the tabs container
-			tabsContainer.animate({ scrollLeft: scrollLeft }, 300); // Smooth scroll effect for tabs
-		}
-		// Arrow navigation
-		$('.ourProducts-wrapper .owl-next').click(function() { goToSlide(currentIndex + 1); });
-		$('.ourProducts-wrapper .owl-prev').click(function() { goToSlide(currentIndex - 1); });
-		$('.indicator').click(function() {
-			const index = $(this).data('slide') - 1;
-			goToSlide(index);
-		});
-		// Tab navigation
-		$('.tab').click(function() {
-			const index = $(this).data('tab') - 1;
-			goToSlide(index);
-		});
-		// Autoplay functionality
-		setInterval(function() {
-			goToSlide(currentIndex + 1);
-		}, autoplayInterval); // Move to next slide every 5 seconds
-		goToSlide(currentIndex); // Initialize the first slide
+		$('.ourProducts-content').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			pauseOnHover: false,
+    		speed: 1000,
+			asNavFor: '.ourProducts-wrapper .tabs'
+		  });
+		  $('.ourProducts-wrapper .tabs').slick({
+			variableWidth: true,
+			slidesToScroll: 1,
+			speed: 1000,
+			asNavFor: '.ourProducts-content',
+			prevArrow:"<button class='slick-prev'><img src='images/icons/arrow.png'></button>",
+			nextArrow:"<button class='slick-next'><img src='images/icons/arrow.png'></button>",
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 575,
+					settings: {
+						variableWidth: false,
+						slidesToShow: 1,
+					},
+				},
+			],
+		  });
 	};	
-	
-	// Select all elements with the class 'theme-stroke-heading .letters'
-	/*$('.theme-stroke-heading .letters').each(function () {
-		var $textWrapper = $(this);
-		// Split each character into a span, adding an extra class if it's inside the <span>
-		$textWrapper.html($textWrapper.html().replace(/(<\/?span[^>]*>)|(\S)/g, function (match, p1, p2) {
-			if (p2) {
-				// Check if we are inside the <span> tag
-				var insideSpan = $textWrapper.find('span').length > 0 && $textWrapper.find('span').contents().filter(function () {
-					return this.nodeType === 3 && this.nodeValue === p2;
-				}).length > 0;
-
-				return `<span class='letter'>${p2}</span>`;
-			}
-			// Keep the original <span> tags
-			return p1 || '';
-		}));
-		// Function to play the animation
-		function playAnimation() {
-			anime.timeline({ loop: false })
-				.add({
-					targets: $textWrapper.find('.letter').toArray(),
-					translateX: [-100, 0],
-					translateY: [50, 0],
-					scale: [0, 1],
-					rotate: [45, 0],
-					opacity: [0, 1],
-					duration: 1500,
-					easing: "easeOutElastic",
-					delay: anime.stagger(70),
-				}).add({
-					targets: $textWrapper.get(0),
-					opacity: 1,
-					duration: 1000,
-					easing: "easeOutExpo",
-					delay: 1000
-				});
-		}
-		// Add hover event listeners using jQuery
-		//$textWrapper.on('mouseenter', playAnimation);
-	})*/;
 	/* client tabs */
 	$('.client-tabs-body .client-tabs-content:first-child').fadeIn();
 	$('.client-tabs-col:first-child button').addClass('active');
