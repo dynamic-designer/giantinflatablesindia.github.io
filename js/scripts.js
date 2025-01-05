@@ -422,6 +422,12 @@ $( document ).ready( function() {
 	lineclamp();
 	blogDetailTitle = $('.blog-detail-title').outerHeight();
 	$('.blog-detail-connect-block').css('margin-top',blogDetailTitle + 14);
+	/* fancybox */
+	if ($("[data-fancybox]").length > 0) {
+		Fancybox.bind("[data-fancybox]", {
+			// Your custom options
+		});
+	}
 } );
 
 /* Script on load

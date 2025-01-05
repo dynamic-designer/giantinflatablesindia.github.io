@@ -118,6 +118,9 @@
     .breadcrumb-inner .btn {
         padding-top: 0.6rem !important;
     }
+    .fancybox-image {
+        margin-top: 2.5rem;
+    }
 }
 @media (max-width:991px) {
     .header-sticky .main-header-search {
@@ -432,9 +435,9 @@
     .catDetailThumb::before, .catDetailThumb::after {
         width: 4.375rem;
     }
-    .subCatProducts-pills-main-slider .item, .subCatProducts-pills-inner-slider .item, .ourProducts-topbar .tabs .btn {
+    .subCatProducts-pills-main-slider .item, .subCatProducts-pills-inner-slider .item, .subCatDetail-pills-slider .item, .ourProducts-topbar .tabs .btn {
         margin-right: .3125rem;
-        margin-left: .3125rem;
+        margin-left: .3125rem; 
     }
     .slick-slider .item > .btn, .ourProducts-topbar .tabs .btn {
         padding-top: .5rem;

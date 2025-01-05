@@ -895,8 +895,8 @@
 .ourProducts-topbar .ourProducts-wrapper--left .btn.slick-current::after, .subCatProducts-pills-main-slider .item.slick-current .btn::after {
   opacity: 1;
 }
-.subCatProducts-pills-main-slider .item, .subCatProducts-pills-inner-slider .item {
-  margin-right: 2.5rem;
+.subCatProducts-pills-main-slider .item, .subCatProducts-pills-inner-slider .item, .subCatDetail-pills-slider .item {
+  margin-right: 2.5rem; 
 }
 .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-prev,
 .ourProducts-topbar .ourProducts-wrapper--left .owl-nav .owl-next {
@@ -1841,4 +1841,14 @@
   opacity: 1;
   z-index: 1;
   filter: invert();
+}
+/* fancybox */
+.fancybox__container {
+  z-index: 9999;
+}
+.fancybox-image {
+  max-width: 95%;
+}
+[data-fancybox] {
+  cursor: pointer;
 }
